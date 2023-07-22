@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
+  pathPrefix: `/website`,
   siteMetadata: {
     title: `MQTIZER | MQTT Client`,
     siteUrl: `https://www.mqtizer.com`,
