@@ -28,6 +28,12 @@ const DownloadButton = styled.button`
   letter-spacing: 0.00938rem;
   border-radius: 0.5rem;
   border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: #2e345e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -48,7 +54,7 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '1rem 3.5vw',
+        padding: '1.4rem 3.5vw',
       }}
     >
       <span
@@ -58,7 +64,7 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
           gap: '1rem',
         }}
       >
-        <StaticImage src="../images/icon.png" alt="A dinosaur" height={44} />
+        <StaticImage quality={100} src="../images/icon.png" alt="Logo" height={44} />
         <p
           style={{
             fontSize: '1.375rem',
