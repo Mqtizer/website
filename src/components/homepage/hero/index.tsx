@@ -73,7 +73,7 @@ export function HeroSection() {
               gap: '1rem',
             }}
           >
-            <StaticImage src="../images/icon.png" alt="Logo" height={72} />
+            <StaticImage src="../../../images/icon.png" alt="Logo" height={72} />
             <LogoText>MQTIZER</LogoText>
           </span>
           <Subtitle>The Cross-Platform MQTT Client for Industrial-Grade IoT Solutions</Subtitle>

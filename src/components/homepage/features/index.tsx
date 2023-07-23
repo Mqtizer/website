@@ -7,7 +7,7 @@ import FeatureCard from './feature_card'
 const SectionTitle = styled.h2`
   font-size: 3.25rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 3.25rem;
 `
 const SectionSubtitle = styled.p`
@@ -59,16 +59,18 @@ export function Features() {
         create robust and efficient IoT solutions.
       </SectionSubtitle>
       <br />
+      <br />
+      <br />
 
       {features.map(feature => {
         const featuredImg = getImage(feature.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData as any)
-        const direction = features.indexOf(feature) % 2 === 0 ? 'row' : 'row-reverse'
+        const reverse = feature.frontmatter?.index % 2 !== 0
         return (
           <FeatureCard
             title={feature.frontmatter?.title || 'title'}
             subtitle={feature.html || 'subtitle'}
             image={featuredImg}
-            direction={direction}
+            reverse={reverse}
           />
         )
       })}

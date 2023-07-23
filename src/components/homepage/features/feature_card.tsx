@@ -6,15 +6,20 @@ export type FeatureCardProps = {
   title: string
   subtitle: string
   image: any
-  direction?: 'row' | 'row-reverse'
+  reverse?: boolean
 }
 
 const FeatureCardWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--direction);
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 
   .image {
     border-radius: 1rem;
@@ -33,7 +38,7 @@ const FeatureCardWrapper = styled.div`
     h2 {
       font-size: 3rem;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 3.25rem;
     }
     p {
@@ -49,15 +54,31 @@ const FeatureCardWrapper = styled.div`
   }
 `
 
-export default function FeatureCard({ title, subtitle, image, direction }: FeatureCardProps) {
+export default function FeatureCard({ title, subtitle, image, reverse }: FeatureCardProps) {
   return (
     <FeatureCardWrapper
       style={{
-        flexDirection: direction,
+        // @ts-ignore
+        '--direction': reverse ? 'row-reverse' : 'row',
       }}
     >
-      <GatsbyImage className="image" image={image} alt="feature image" />
-      <div className="text">
+      <div
+        className="image"
+        data-sal={reverse ? 'slide-left' : 'slide-right'}
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        data-sal-duration="250"
+      >
+        <GatsbyImage image={image} alt="feature image" />
+      </div>
+
+      <div
+        className="text"
+        data-sal={reverse ? 'slide-right' : 'slide-left'}
+        data-sal-delay="250"
+        data-sal-easing="ease"
+        data-sal-duration="250"
+      >
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{ __html: subtitle }} />
       </div>

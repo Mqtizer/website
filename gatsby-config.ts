@@ -31,6 +31,7 @@ const config: GatsbyConfig = {
     'gatsby-transformer-remark',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-scroll-reveal-with-new-react`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
