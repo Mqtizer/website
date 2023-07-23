@@ -21,7 +21,22 @@ const IndexPage: React.FC<PageProps> = () => {
         }}
       >
         <HeroSection />
-        <Features />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            width: '90vw',
+            margin: '0 auto',
+            overflowX: 'hidden',
+            gap: '2rem',
+            maxWidth: '1360px',
+            minWidth: '320px',
+          }}
+        >
+          <Features />
+        </div>
       </div>
     </MainLayout>
   )

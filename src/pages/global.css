@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito';
-
-
+    transition: 0.3s;
 }
 
 html {
@@ -27,6 +26,12 @@ a:hover {
 body {
     background-color: #FEFEFE;
     color: #191C1E;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 80%;
+    }
 }
 
 body::-webkit-scrollbar {

@@ -29,7 +29,16 @@ const HeroLayer = styled.div`
   height: 80vh;
   max-height: 840px;
   width: 96vw;
+  margin: auto;
   color: #353d69;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0rem;
+    width: 100vw;
+    .hero_phone {
+      display: none;
+    }
+  }
 `
 const LogoText = styled.p`
   font-size: 3.25rem;
@@ -63,7 +72,7 @@ export function HeroSection() {
             flexDirection: 'column',
             gap: '2rem',
             maxWidth: '500px',
-            marginLeft: '2rem',
+            padding: '2rem',
           }}
         >
           <span
@@ -95,6 +104,7 @@ export function HeroSection() {
         </div>
 
         <StaticImage
+          className="hero_phone"
           src="../../../images/hero_phone.png"
           alt="Hero Phone"
           width={6000}

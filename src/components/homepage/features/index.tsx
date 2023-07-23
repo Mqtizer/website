@@ -17,7 +17,6 @@ const SectionSubtitle = styled.p`
   line-height: 2.5rem;
 `
 const Section = styled.div`
-  padding: 3.25rem 5.75rem 2.5rem 5.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
