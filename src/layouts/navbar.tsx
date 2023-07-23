@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import useScrollPosition from '../hooks/useScrollPosition'
 const NAVIGATION_LINKS = [
   {
     name: 'Home',
@@ -43,20 +44,35 @@ const StyledLink = styled(Link)`
   line-height: 1.5rem;
   letter-spacing: 0.00938rem;
 `
+
+const NavBarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3.5vw;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  background-color: rgba(255, 253, 250, 0.9);
+  background-filter: blur(20px);
+  &.shadow {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+`
+const shadow = `
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  `
 export type NavBarProps = {
   openDownloadCTAClick: () => void
 }
 
 export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
+  const scrollPosition = useScrollPosition()
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1.4rem 3.5vw',
-      }}
-    >
+    <NavBarContainer className={scrollPosition > 215 ? 'shadow' : ''}>
       <span
         style={{
           display: 'flex',
@@ -97,6 +113,6 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
           />
         </svg>
       </DownloadButton>
-    </div>
+    </NavBarContainer>
   )
 }

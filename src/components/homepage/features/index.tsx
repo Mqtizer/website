@@ -42,7 +42,9 @@ export function Features() {
       }
     }
   `)
-  const features = data.allMarkdownRemark.nodes.sort((a, b) => {
+  let features = data.allMarkdownRemark.nodes as any[]
+
+  features = features.sort((a: { frontmatter: { index: number } }, b: { frontmatter: { index: number } }) => {
     return a.frontmatter?.index - b.frontmatter?.index
   })
 
