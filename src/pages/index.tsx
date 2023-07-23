@@ -5,6 +5,7 @@ import './global.css'
 import MainLayout from '../layouts'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import { Features } from '../components/homepage'
 const Hero = styled.div`
   background: #feebcc url('fade_logo.svg') no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
@@ -51,61 +52,75 @@ const IndexPage: React.FC<PageProps> = () => {
     <MainLayout openDownloadCTAClick={() => console.log('hello')}>
       <div
         style={{
-          position: 'relative',
+          display: 'flex',
+          justifyContent: 'start',
+          alignItems: 'start',
         }}
       >
-        <Hero />
-        <HeroLayer>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '2rem',
-              maxWidth: '500px',
-              marginLeft: '2rem',
-            }}
-          >
-            <span
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-              }}
-            >
-              <StaticImage src="../images/icon.png" alt="Logo" height={70} />
-              <LogoText>MQTIZER</LogoText>
-            </span>
-            <Subtitle>The Cross-Platform MQTT Client for Industrial-Grade IoT Solutions</Subtitle>
-            <Subtitle>Get the app on Store</Subtitle>
+        <div
+          style={{
+            position: 'relative',
+            height: '80vh',
+            maxHeight: '840px',
+            width: '100vw',
+          }}
+        >
+          <Hero />
+          <HeroLayer>
             <div
               style={{
                 display: 'flex',
-                gap: '1rem',
+                flexDirection: 'column',
+                gap: '2rem',
+                maxWidth: '500px',
+                marginLeft: '2rem',
               }}
             >
-              <Link
-                to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client&hl=en_US"
-                target="blank"
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                }}
               >
-                <StaticImage quality={100} src="../images/google_play.svg" alt="Google Play" height={52} />
-              </Link>
-              <StaticImage quality={100} src="../images/apple_store.svg" alt="Apple Store" height={52} />
+                <StaticImage src="../images/icon.png" alt="Logo" height={70} />
+                <LogoText>MQTIZER</LogoText>
+              </span>
+              <Subtitle>The Cross-Platform MQTT Client for Industrial-Grade IoT Solutions</Subtitle>
+              <Subtitle>Get the app on Store</Subtitle>
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '1rem',
+                }}
+              >
+                <Link
+                  to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client&hl=en_US"
+                  target="blank"
+                >
+                  <StaticImage quality={100} src="../images/google_play.svg" alt="Google Play" height={52} />
+                </Link>
+                <StaticImage quality={100} src="../images/apple_store.svg" alt="Apple Store" height={52} />
+              </div>
             </div>
-          </div>
 
-          <StaticImage
-            src="../images/hero_phone.png"
-            alt="Hero Phone"
-            width={6000}
-            quality={100}
-            style={{
-              transform: 'translateY(12%) translateX(-2%)',
-              width: '80vh',
-              maxWidth: '700px',
-            }}
-          />
-        </HeroLayer>
+            <StaticImage
+              src="../images/hero_phone.png"
+              alt="Hero Phone"
+              width={6000}
+              quality={100}
+              style={{
+                transform: 'translateY(12%) translateX(-2%)',
+                width: '80vh',
+                maxWidth: '700px',
+              }}
+            />
+          </HeroLayer>
+        </div>
       </div>
+      <Features />
+      <Features />
+      <Features />
     </MainLayout>
   )
 }

@@ -9,12 +9,10 @@ interface MainLayoutProps {
 export default function MainLayout({ children, openDownloadCTAClick }: MainLayoutProps) {
   return (
     <>
-      <div className="">
-        <Navbar openDownloadCTAClick={openDownloadCTAClick} />
-        {/* <SocialLinksContainer showEmail={false} /> */}
-        {children}
-        {/* <Footer /> */}
-      </div>
+      <Navbar openDownloadCTAClick={openDownloadCTAClick} />
+      {/* <SocialLinksContainer showEmail={false} /> */}
+      {children}
+      {/* <Footer /> */}
     </>
   )
 }
