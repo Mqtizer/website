@@ -16,7 +16,6 @@ const IndexPage: React.FC<PageProps> = () => {
           alignItems: 'start',
           flexDirection: 'column',
           width: '100vw',
-          overflowX: 'hidden',
           gap: '2rem',
         }}
       >
@@ -28,9 +27,9 @@ const IndexPage: React.FC<PageProps> = () => {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
-            width: '90vw',
+            width: '80vw',
+
             margin: '0 auto',
-            overflowX: 'hidden',
             gap: '2rem',
             maxWidth: '1360px',
             minWidth: '320px',

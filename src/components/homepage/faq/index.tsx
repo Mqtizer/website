@@ -55,7 +55,6 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.4rem;
-  width: 100%;
 `
 
 export function Faq() {
@@ -68,7 +67,6 @@ export function Faq() {
 
       <div
         style={{
-          width: '100%',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

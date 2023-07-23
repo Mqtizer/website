@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import Navbar from './navbar'
+import Footer from './footer'
 
 interface MainLayoutProps {
   children: React.ReactNode
@@ -12,7 +13,7 @@ export default function MainLayout({ children, openDownloadCTAClick }: MainLayou
       <Navbar openDownloadCTAClick={openDownloadCTAClick} />
       {/* <SocialLinksContainer showEmail={false} /> */}
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

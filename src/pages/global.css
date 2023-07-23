@@ -30,6 +30,7 @@ a:hover {
 body {
     background-color: #FEFEFE;
     color: #191C1E;
+    overflow-x: hidden;
 }
 
 @media (max-width: 1080px) {
@@ -50,4 +51,28 @@ body::-webkit-scrollbar-thumb {
     background-color: #90909A;
     border-radius: 20px;
     border: 3px solid rgba(255, 253, 250, 1);
+}
+
+button {
+    display: flex;
+    padding: 0.625rem 0.75rem 0.625rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: #353d69;
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.00938rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background: #2e345e;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }

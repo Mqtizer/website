@@ -14,29 +14,6 @@ const NAVIGATION_LINKS = [
   },
 ]
 
-const DownloadButton = styled.button`
-  display: flex;
-  padding: 0.625rem 0.75rem 0.625rem 1rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  background: #353d69;
-  color: #fff;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5rem;
-  letter-spacing: 0.00938rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background: #2e345e;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-`
-
 const StyledLink = styled(Link)`
   font-size: 1.25rem;
   font-style: normal;
@@ -104,7 +81,7 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
           </StyledLink>
         ))}
       </div>
-      <DownloadButton onClick={() => openDownloadCTAClick()}>
+      <button onClick={() => openDownloadCTAClick()}>
         Download
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -112,7 +89,7 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
             fill="white"
           />
         </svg>
-      </DownloadButton>
+      </button>
     </NavBarContainer>
   )
 }

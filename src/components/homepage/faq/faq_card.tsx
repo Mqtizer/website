@@ -8,7 +8,6 @@ const FaqContainer = styled.div`
   justify-content: center;
   align-items: stretch;
   padding: 2rem;
-  width: 100%;
   border-radius: 0.5rem;
   cursor: pointer;
 
