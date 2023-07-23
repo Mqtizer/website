@@ -22,7 +22,6 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
 `
 export function Features() {
   const data = useStaticQuery<Queries.Query>(graphql`
@@ -31,35 +30,41 @@ export function Features() {
         nodes {
           frontmatter {
             title
-            subtitle
+            index
             featuredImage {
               childImageSharp {
-                gatsbyImageData(height: 1000)
+                gatsbyImageData(width: 1000)
               }
             }
           }
+          html
         }
       }
     }
   `)
-  const features = data.allMarkdownRemark.nodes
+  const features = data.allMarkdownRemark.nodes.sort((a, b) => {
+    return a.frontmatter?.index - b.frontmatter?.index
+  })
 
   return (
     <Section>
       <SectionTitle>Unlock the Power of Mqtizer</SectionTitle>
+      <br />
+      <br />
       <SectionSubtitle>
         Mqtizer offers a range of innovative features designed to simplify your IoT development process. From seamless
         collaboration and simulated data generation to comprehensive configuration management, Mqtizer empowers you to
         create robust and efficient IoT solutions.
       </SectionSubtitle>
+      <br />
 
       {features.map(feature => {
-        const featuredImg = getImage(feature.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData)
+        const featuredImg = getImage(feature.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData as any)
         const direction = features.indexOf(feature) % 2 === 0 ? 'row' : 'row-reverse'
         return (
           <FeatureCard
             title={feature.frontmatter?.title || 'title'}
-            subtitle={feature.frontmatter?.subtitle || 'subtitle'}
+            subtitle={feature.html || 'subtitle'}
             image={featuredImg}
             direction={direction}
           />

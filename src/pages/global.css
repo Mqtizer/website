@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito';
-    color: #353D69;
+
 
 }
 
@@ -15,10 +15,18 @@ html {
 
 a {
     text-decoration: none;
+    color: #191C1E;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #191C1E;
+    text-shadow: 0px 0px 1px #191C1E;
 }
 
 body {
     background-color: #FEFEFE;
+    color: #191C1E;
 }
 
 body::-webkit-scrollbar {

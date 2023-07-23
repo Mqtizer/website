@@ -32,19 +32,20 @@ const HeroLayer = styled.div`
   height: 80vh;
   max-height: 840px;
   width: 96vw;
+  color: #353d69;
 `
 const LogoText = styled.p`
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: 3.43938rem;
 `
 
 const Subtitle = styled.p`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 2.14963rem;
+  font-weight: 400;
+  line-height: 2.25rem;
 `
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -83,7 +84,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   gap: '1rem',
                 }}
               >
-                <StaticImage src="../images/icon.png" alt="Logo" height={70} />
+                <StaticImage src="../images/icon.png" alt="Logo" height={72} />
                 <LogoText>MQTIZER</LogoText>
               </span>
               <Subtitle>The Cross-Platform MQTT Client for Industrial-Grade IoT Solutions</Subtitle>
@@ -118,8 +119,6 @@ const IndexPage: React.FC<PageProps> = () => {
           </HeroLayer>
         </div>
       </div>
-      <Features />
-      <Features />
       <Features />
     </MainLayout>
   )

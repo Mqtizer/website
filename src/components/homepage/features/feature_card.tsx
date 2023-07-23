@@ -15,12 +15,11 @@ const FeatureCardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
 
   .image {
     border-radius: 1rem;
     max-width: 1000px;
-    flex: 1;
+    flex: 1.2;
   }
 
   .text {
@@ -37,11 +36,15 @@ const FeatureCardWrapper = styled.div`
       font-weight: 600;
       line-height: 3.25rem;
     }
-    h3 {
+    p {
       font-size: 2rem;
       font-style: normal;
       font-weight: 400;
       line-height: 2.5rem;
+      strong {
+        color: #7a5900;
+        font-weight: 460;
+      }
     }
   }
 `
@@ -56,7 +59,7 @@ export default function FeatureCard({ title, subtitle, image, direction }: Featu
       <GatsbyImage className="image" image={image} alt="feature image" />
       <div className="text">
         <h2>{title}</h2>
-        <h3>{subtitle}</h3>
+        <div dangerouslySetInnerHTML={{ __html: subtitle }} />
       </div>
     </FeatureCardWrapper>
   )
