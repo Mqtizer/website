@@ -8,22 +8,9 @@ const FaqContainer = styled.div`
   justify-content: center;
   align-items: stretch;
   padding: 2rem;
-  gap: 2rem;
   width: 100%;
-  border-radius: 0.25rem;
-  border-bottom: 2px solid #c6c5d0;
-  background: #fcfcff;
+  border-radius: 0.5rem;
   cursor: pointer;
-
-  &.active {
-    border-bottom: 2px solid #353d69;
-    background: var(
-      --m-3-surfaces-light-surface-2,
-      linear-gradient(0deg, rgba(73, 88, 169, 0.08) 0%, rgba(73, 88, 169, 0.08) 100%),
-      #fcfcff
-    );
-    transition: all 0.2s ease-in-out;
-  }
 
   h4 {
     font-size: 1.75rem;
@@ -39,7 +26,6 @@ const FaqContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 2rem;
-    display: none;
   }
 `
 
@@ -51,7 +37,13 @@ export function FaqCard({ question, answer }: FaqCardProps) {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <FaqContainer onClick={() => setOpen(!open)} className={open ? 'active' : ''}>
+    <FaqContainer
+      onClick={() => setOpen(!open)}
+      style={{
+        borderBottom: open ? '2px solid #353d69' : '2px solid #c6c5d0',
+        backgroundColor: open ? '#F3F4FB' : '#FCFCFF',
+      }}
+    >
       <h4>
         {question}
         <svg
@@ -68,7 +60,9 @@ export function FaqCard({ question, answer }: FaqCardProps) {
       </h4>
       <p
         style={{
-          display: open ? 'block' : 'none',
+          height: open ? 'auto' : '0',
+          overflow: 'hidden',
+          padding: open ? '2rem 0' : '0',
         }}
       >
         {answer}

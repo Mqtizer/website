@@ -69,6 +69,11 @@ export function Faq() {
       <div
         style={{
           width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '1.2rem',
         }}
       >
         {faqs.map(faq => (
