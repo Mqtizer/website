@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
+import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
+import React from 'react'
 import FeatureCard from './feature_card'
 
 const SectionTitle = styled.h2`
