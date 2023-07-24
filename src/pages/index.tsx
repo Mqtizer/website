@@ -1,7 +1,6 @@
 import * as React from 'react'
 import type { HeadFC, PageProps } from 'gatsby'
 
-import './global.css'
 import MainLayout from '../layouts'
 
 import { Faq, Features, HeroSection, Why } from '../components/homepage'

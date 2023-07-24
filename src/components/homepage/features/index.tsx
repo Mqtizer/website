@@ -26,7 +26,7 @@ const Section = styled.div`
 export function Features() {
   const data = useStaticQuery<Queries.Query>(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { kind: { eq: "feature" } } }) {
         nodes {
           frontmatter {
             title

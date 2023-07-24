@@ -1,9 +1,8 @@
-import styled from '@emotion/styled'
 import React, { useEffect, useState } from 'react'
-import Navbar from './navbar'
-import Footer from './footer'
 import Contact from './contact'
-
+import Footer from './footer'
+import './global.css'
+import Navbar from './navbar'
 interface MainLayoutProps {
   children: React.ReactNode
   contactModalState?: boolean
