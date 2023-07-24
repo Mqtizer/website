@@ -4,7 +4,7 @@ import type { HeadFC, PageProps } from 'gatsby'
 import './global.css'
 import MainLayout from '../layouts'
 
-import { Faq, Features, HeroSection } from '../components/homepage'
+import { Faq, Features, HeroSection, Why } from '../components/homepage'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -30,11 +30,12 @@ const IndexPage: React.FC<PageProps> = () => {
             width: '80vw',
 
             margin: '0 auto',
-            gap: '2rem',
+            gap: '6rem',
             maxWidth: '1360px',
             minWidth: '320px',
           }}
         >
+          <Why />
           <Features />
           <Faq />
         </div>

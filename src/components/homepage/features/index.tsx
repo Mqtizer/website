@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { graphql, useStaticQuery } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
+import { StaticImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import FeatureCard from './feature_card'
 
@@ -19,8 +19,9 @@ const SectionSubtitle = styled.p`
 const Section = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: start;
   justify-content: center;
-  align-items: stretch;
+  gap: 2rem;
 `
 export function Features() {
   const data = useStaticQuery<Queries.Query>(graphql`
@@ -49,17 +50,15 @@ export function Features() {
 
   return (
     <Section id="features">
+      <StaticImage quality={100} src="../../../images/feature_icon.png" alt="Google Play" width={72} height={72} />
+
       <SectionTitle>Unlock the Power of Mqtizer</SectionTitle>
-      <br />
-      <br />
+
       <SectionSubtitle>
         Mqtizer offers a range of innovative features designed to simplify your IoT development process. From seamless
         collaboration and simulated data generation to comprehensive configuration management, Mqtizer empowers you to
         create robust and efficient IoT solutions.
       </SectionSubtitle>
-      <br />
-      <br />
-      <br />
 
       {features.map(feature => {
         const featuredImg = getImage(feature.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData as any)
