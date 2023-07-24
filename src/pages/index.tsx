@@ -8,7 +8,7 @@ import { Faq, Features, HeroSection, Why } from '../components/homepage'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <MainLayout openDownloadCTAClick={() => console.log('hello')}>
+    <MainLayout>
       <div
         style={{
           display: 'flex',

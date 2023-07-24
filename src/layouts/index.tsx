@@ -1,19 +1,26 @@
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './navbar'
 import Footer from './footer'
+import Contact from './contact'
 
 interface MainLayoutProps {
   children: React.ReactNode
-  openDownloadCTAClick: () => void
+  contactModalState?: boolean
 }
-export default function MainLayout({ children, openDownloadCTAClick }: MainLayoutProps) {
+export default function MainLayout({ children, contactModalState = false }: MainLayoutProps) {
+  const [contactModalOpen, setContactModalOpen] = useState(contactModalState)
+
+  useEffect(() => {
+    setContactModalOpen(contactModalState)
+  }, [contactModalState])
+
   return (
     <>
-      <Navbar openDownloadCTAClick={openDownloadCTAClick} />
-      {/* <SocialLinksContainer showEmail={false} /> */}
+      <Contact open={contactModalOpen} onClose={() => setContactModalOpen(false)} />
+      <Navbar onContactCTAClick={() => setContactModalOpen(true)} />
       {children}
-      <Footer />
+      <Footer onContactCTAClick={() => setContactModalOpen(true)} />
     </>
   )
 }

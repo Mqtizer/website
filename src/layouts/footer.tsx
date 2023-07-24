@@ -47,7 +47,7 @@ const footerSection = [
 
 const FooterContainer = styled.div`
   position: relative;
-  margin-top: 24vh;
+  margin-top: 16rem;
 `
 
 const QuestionSection = styled.div`
@@ -63,6 +63,11 @@ const QuestionSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 920px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3.75rem 2.75rem;
+  }
   .left {
     display: flex;
     flex-direction: column;
@@ -92,12 +97,19 @@ const FooterSection = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 4rem;
+  @media only screen and (max-width: 920px) {
+    padding: 18rem 2.75rem 4rem 2.75rem;
+  }
   .main-section {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    row-gap: 4rem;
     .link-section-container {
+      // flex: 1;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -109,14 +121,15 @@ const FooterSection = styled.div`
       line-height: 1.75rem;
     }
     .link-content {
-      font-size: 1.375rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.75rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
       a {
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.75rem;
         color: #ffffff;
         text-decoration: none;
         &:hover {
@@ -145,11 +158,18 @@ const BrandSection = styled.div`
   gap: 2rem;
   color: #feebcc;
   width: 30%;
+  min-width: 400px;
+  // flex: 1;
 
   .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
+    img {
+      margin: 0;
+      width: 52px;
+      height: 52px;
+    }
   }
   .logo-text {
     font-size: 2rem;
@@ -174,13 +194,17 @@ const BottomSection = styled.div`
   span {
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5rem; /* 120% */
     letter-spacing: 0.00938rem;
   }
 `
 
-export default function Footer() {
+export type FooterProps = {
+  onContactCTAClick: () => void
+}
+
+export default function Footer({ onContactCTAClick }: FooterProps) {
   return (
     <FooterContainer>
       <QuestionSection>
@@ -189,6 +213,7 @@ export default function Footer() {
           <span className="foot">Contact our Developers.</span>
         </div>
         <button
+          onClick={() => onContactCTAClick()}
           style={{
             fontSize: '1.375rem',
             fontStyle: 'normal',

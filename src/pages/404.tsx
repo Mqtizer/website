@@ -4,7 +4,7 @@ import MainLayout from '../layouts'
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <MainLayout openDownloadCTAClick={() => console.log('hello')}>
+    <MainLayout>
       <main
         style={{
           display: 'flex',

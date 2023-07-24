@@ -25,7 +25,7 @@ const PainCardContainer = styled.div`
     h3 {
       font-size: 2rem;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 2.25rem;
       color: #191c1e;
     }
