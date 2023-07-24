@@ -9,7 +9,7 @@ const footerSection = [
     links: [
       {
         name: 'Features',
-        link: '/features',
+        link: '/#features',
       },
       {
         name: 'Blog',
@@ -35,7 +35,7 @@ const footerSection = [
     links: [
       {
         name: 'FAQ',
-        link: '/faq',
+        link: '/#faq',
       },
       {
         name: 'Contact Us',
@@ -67,7 +67,7 @@ const QuestionSection = styled.div`
     display: flex;
     flex-direction: column;
     color: #00115a;
-    gap: 1rem;
+    gap: 0.8rem;
     .head {
       font-size: 3rem;
       font-style: normal;
@@ -111,7 +111,7 @@ const FooterSection = styled.div`
     .link-content {
       font-size: 1.375rem;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.75rem;
       display: flex;
       flex-direction: column;
@@ -244,7 +244,7 @@ export default function Footer() {
           }}
         />
         <BottomSection>
-          <span>© 2021 Mqtizer. All rights reserved.</span>
+          <span>© 2023 Mqtizer. All rights reserved.</span>
 
           <div
             style={{

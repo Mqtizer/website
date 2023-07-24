@@ -5,12 +5,12 @@ import { Link } from 'gatsby'
 import useScrollPosition from '../hooks/useScrollPosition'
 const NAVIGATION_LINKS = [
   {
-    name: 'Home',
-    path: '/#hero',
+    name: 'Features',
+    path: '/#features',
   },
   {
-    name: 'Projects',
-    path: '/#projects',
+    name: 'FAQ & Support',
+    path: '/#faq',
   },
 ]
 

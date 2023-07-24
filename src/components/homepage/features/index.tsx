@@ -48,7 +48,7 @@ export function Features() {
   })
 
   return (
-    <Section>
+    <Section id="features">
       <SectionTitle>Unlock the Power of Mqtizer</SectionTitle>
       <br />
       <br />
