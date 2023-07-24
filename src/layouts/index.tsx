@@ -1,7 +1,7 @@
+import './global.css'
 import React, { useEffect, useState } from 'react'
 import Contact from './contact'
 import Footer from './footer'
-import './global.css'
 import Navbar from './navbar'
 interface MainLayoutProps {
   children: React.ReactNode

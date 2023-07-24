@@ -59,22 +59,7 @@ const LogoLink = styled(Link)`
     font-weight: 500;
   }
 `
-const HamBurger = styled.button`
-  width: 40px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: none;
-  padding: 5px;
-  @media only screen and (max-width: 920px) {
-    display: block;
-  }
-  // nothing on hover
-  &:hover {
-    background: none;
-    box-shadow: none;
-  }
-`
+
 const NavLinks = styled.nav`
   display: flex;
   flex-direction: row;
@@ -120,7 +105,22 @@ const Overlay = styled.div`
     margin: 0 auto;
   }
 `
+const HamBurger = styled.button`
+  width: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  padding: 5px;
+  @media only screen and (max-width: 920px) {
+    display: block;
+  }
 
+  &:hover {
+    background: none;
+    box-shadow: none;
+  }
+`
 export type NavBarProps = {
   onContactCTAClick: () => void
 }

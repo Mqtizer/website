@@ -11,9 +11,8 @@
 }
 
 html {
-    font-size: 100%;
-    scroll-behavior: smooth;
-
+    font-size: 16px;
+    /* scroll-behavior: smooth; */
 }
 
 a {
@@ -31,11 +30,12 @@ body {
     background-color: #FEFEFE;
     color: #191C1E;
     overflow-x: hidden;
+
 }
 
 @media (max-width: 1080px) {
     html {
-        font-size: 80%;
+        font-size: 12px;
     }
 }
 
