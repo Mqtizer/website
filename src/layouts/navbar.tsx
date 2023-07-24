@@ -39,9 +39,17 @@ const NavBarContainer = styled.div`
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 `
-const shadow = `
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  `
+const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    margin: 0;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+`
 export type NavBarProps = {
   openDownloadCTAClick: () => void
 }
@@ -50,24 +58,10 @@ export default function Navbar({ openDownloadCTAClick }: NavBarProps) {
   const scrollPosition = useScrollPosition()
   return (
     <NavBarContainer className={scrollPosition > 215 ? 'shadow' : ''}>
-      <span
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-        }}
-      >
+      <LogoLink to="/" key="logo">
         <StaticImage quality={100} src="../images/icon.png" alt="Logo" height={44} />
-        <p
-          style={{
-            fontSize: '1.375rem',
-            fontStyle: 'normal',
-            fontWeight: 500,
-          }}
-        >
-          MQTIZER
-        </p>
-      </span>
+        <p>MQTIZER</p>
+      </LogoLink>
       <div
         style={{
           display: 'flex',
