@@ -3,7 +3,7 @@ import React from 'react'
 import MainLayout from '../layouts'
 import { PageProps, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import AboutCard from '../components/about_card'
+import { AboutCard, TeamFooter } from '../components/about'
 
 const AboutContainer = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export default function About({ data }: PageProps<Queries.Query>) {
     return a.frontmatter?.index - b.frontmatter?.index
   })
   return (
-    <MainLayout>
+    <MainLayout footerMarginTop="40rem" footerMarginTopMobile="60rem" footerChildren={<TeamFooter />}>
       <AboutContainer>
         <h1>
           About <span className="mq">Mqtizer</span>{' '}

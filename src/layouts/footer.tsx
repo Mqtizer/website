@@ -157,14 +157,23 @@ const BottomSection = styled.div`
 export type FooterProps = {
   children?: React.ReactNode
   marginTop?: string
+  marginTopMobile?: string
 }
+const FooterWrapper = styled.div`
+  position: relative;
+  margin-top: var(--footer-margin-top);
+  @media only screen and (max-width: 768px) {
+    margin-top: var(--footer-margin-top-mobile);
+  }
+`
 
-export default function Footer({ children, marginTop = '16rem' }: FooterProps) {
+export default function Footer({ children, marginTop = '16rem', marginTopMobile }: FooterProps) {
   return (
-    <div
+    <FooterWrapper
       style={{
-        marginTop,
-        position: 'relative',
+        // @ts-ignore
+        '--footer-margin-top': marginTop,
+        '--footer-margin-top-mobile': marginTopMobile,
       }}
     >
       {children}
@@ -241,6 +250,6 @@ export default function Footer({ children, marginTop = '16rem' }: FooterProps) {
           </div>
         </BottomSection>
       </FooterSection>
-    </div>
+    </FooterWrapper>
   )
 }

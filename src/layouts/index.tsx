@@ -6,13 +6,22 @@ import { ContactFormContainer } from '../context/contact_form'
 interface MainLayoutProps {
   children: React.ReactNode
   footerChildren?: React.ReactNode
+  footerMarginTop?: string
+  footerMarginTopMobile?: string
 }
-export default function MainLayout({ children, footerChildren }: MainLayoutProps) {
+export default function MainLayout({
+  children,
+  footerChildren,
+  footerMarginTop,
+  footerMarginTopMobile,
+}: MainLayoutProps) {
   return (
     <ContactFormContainer>
       <Navbar />
       {children}
-      <Footer>{footerChildren}</Footer>
+      <Footer marginTop={footerMarginTop} marginTopMobile={footerMarginTopMobile}>
+        {footerChildren}
+      </Footer>
     </ContactFormContainer>
   )
 }

@@ -50,7 +50,7 @@ const AboutCardWrapper = styled.div`
     flex: 1;
   }
 `
-export default function AboutCard({ title, description, image, reverse }: AboutCardProps) {
+export function AboutCard({ title, description, image, reverse }: AboutCardProps) {
   return (
     <AboutCardWrapper
       style={{
