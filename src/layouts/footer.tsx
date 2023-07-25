@@ -129,7 +129,7 @@ const BrandSection = styled.div`
   .logo-text {
     font-size: 2rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 2.545rem;
   }
   .sub-heading {

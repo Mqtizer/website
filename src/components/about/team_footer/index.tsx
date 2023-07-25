@@ -142,12 +142,19 @@ export const TeamFooter = () => {
       <br />
       <br />
       <div className="team">
-        {team.map((member: any) => {
+        {team.map((member: any, index: number) => {
           const featuredImg = getImage(
             member.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData as any
           ) as any
           return (
-            <div className="member" key={member.frontmatter.name}>
+            <div
+              className="member"
+              key={member.frontmatter.name}
+              data-sal={index % 2 !== 0 ? 'slide-left' : 'slide-right'}
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              data-sal-duration="250"
+            >
               <div className="rowOne">
                 <GatsbyImage class="image" image={featuredImg} alt="feature image" />
                 <span>
