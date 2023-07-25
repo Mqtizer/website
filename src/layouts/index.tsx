@@ -1,25 +1,18 @@
 import './global.css'
 import React, { useEffect, useState } from 'react'
-import Contact from './contact'
 import Footer from './footer'
 import Navbar from './navbar'
+import { ContactFormContainer } from '../context/contact_form'
 interface MainLayoutProps {
   children: React.ReactNode
-  contactModalState?: boolean
+  footerChildren?: React.ReactNode
 }
-export default function MainLayout({ children, contactModalState = false }: MainLayoutProps) {
-  const [contactModalOpen, setContactModalOpen] = useState(contactModalState)
-
-  useEffect(() => {
-    setContactModalOpen(contactModalState)
-  }, [contactModalState])
-
+export default function MainLayout({ children, footerChildren }: MainLayoutProps) {
   return (
-    <>
-      <Contact open={contactModalOpen} onClose={() => setContactModalOpen(false)} />
-      <Navbar onContactCTAClick={() => setContactModalOpen(true)} />
+    <ContactFormContainer>
+      <Navbar />
       {children}
-      <Footer onContactCTAClick={() => setContactModalOpen(true)} />
-    </>
+      <Footer>{footerChildren}</Footer>
+    </ContactFormContainer>
   )
 }

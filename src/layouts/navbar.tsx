@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import useScrollPosition from '../hooks/useScrollPosition'
+import { useContactForm } from '../context/contact_form'
 const NAVIGATION_LINKS = [
   {
     name: 'Features',
@@ -121,13 +122,12 @@ const HamBurger = styled.button`
     box-shadow: none;
   }
 `
-export type NavBarProps = {
-  onContactCTAClick: () => void
-}
+export type NavBarProps = {}
 
-export default function Navbar({ onContactCTAClick }: NavBarProps) {
+export default function Navbar({}: NavBarProps) {
   const scrollPosition = useScrollPosition()
   const [isOverlayVisible, setOverlayVisible] = useState(false)
+  const { setContactModalOpen } = useContactForm()
   return (
     <NavBarContainer className={scrollPosition > 215 ? 'shadow' : ''}>
       <Logo />
@@ -155,7 +155,7 @@ export default function Navbar({ onContactCTAClick }: NavBarProps) {
           <path fillRule="nonzero" d="M0 0h512v23.91H0V0zm0 327.76h512v23.91H0v-23.91zm0-163.88h512v23.91H0v-23.91z" />
         </svg>
       </HamBurger>
-      <DownloadButton onClick={() => onContactCTAClick()}>
+      <DownloadButton onClick={() => setContactModalOpen()}>
         Contact Us
         {/* <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -213,7 +213,7 @@ export default function Navbar({ onContactCTAClick }: NavBarProps) {
           }}
           onClick={() => {
             setOverlayVisible(false)
-            onContactCTAClick()
+            setContactModalOpen()
           }}
         >
           Contact Us

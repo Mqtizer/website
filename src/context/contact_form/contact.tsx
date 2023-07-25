@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import useForm from '../hooks/useForm'
+import useForm from '../../hooks/useForm'
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i
 

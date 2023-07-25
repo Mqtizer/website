@@ -75,7 +75,7 @@ export function Faq() {
         }}
       >
         {faqs.map(faq => (
-          <FaqCard question={faq.question} answer={faq.answer} />
+          <FaqCard key={faq.question} question={faq.question} answer={faq.answer} />
         ))}
       </div>
     </Section>

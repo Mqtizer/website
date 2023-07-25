@@ -65,6 +65,7 @@ export function Features() {
         const reverse = feature.frontmatter?.index % 2 !== 0
         return (
           <FeatureCard
+            key={feature.frontmatter?.index}
             title={feature.frontmatter?.title || 'title'}
             subtitle={feature.html || 'subtitle'}
             image={featuredImg}
