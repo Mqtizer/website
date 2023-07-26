@@ -52,12 +52,12 @@ const PolicyContainer = styled.div`
   }
 `
 export default function About({ data }: PageProps<Queries.Query>) {
-  let aboutSections = data.markdownRemark as any
+  let privacyPolicy = data.markdownRemark as any
 
   return (
     <MainLayout>
       <PolicyContainer>
-        <div dangerouslySetInnerHTML={{ __html: aboutSections.html }} />
+        <div dangerouslySetInnerHTML={{ __html: privacyPolicy.html }} />
       </PolicyContainer>
     </MainLayout>
   )
@@ -75,4 +75,4 @@ export const query = graphql`
   }
 `
 
-export const Head: HeadFC = () => <SEO title=" About" />
+export const Head: HeadFC = () => <SEO title=" Privacy Policy" />
