@@ -24,8 +24,10 @@ const PolicyContainer = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 3.25rem;
-    color: #353d69;
-    margin: 2rem 0rem;
+    .mq {
+      color: #00115a;
+      text-transform: uppercase;
+    }
   }
   h2 {
     font-size: 2.5rem;
@@ -59,6 +61,9 @@ export default function About({ data }: PageProps<Queries.Query>) {
   return (
     <MainLayout>
       <PolicyContainer>
+        <h1>
+          Privacy Policy For <span className="mq">Mqtizer</span>{' '}
+        </h1>
         <div dangerouslySetInnerHTML={{ __html: privacyPolicy.html }} />
       </PolicyContainer>
     </MainLayout>
