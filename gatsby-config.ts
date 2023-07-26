@@ -5,8 +5,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `MQTIZER | MQTT Client`,
     siteUrl: `https://www.mqtizer.com`,
-    description: `Cross Platform Mobile first Industrial grade MQTT Client for IoT and Industry 4.0`,
-    hiddenDescription: `MQTIZER is a MQTT Client for Web. It is a web application that allows you to connect to a MQTT broker and publish/subscribe to MQTT topics.`,
+    description: `Cross Platform, Mobile first, collaborative Industrial grade MQTT Client for IoT and Industry 4.0. Batteries included`,
     linkedInUsername: `mqtizer`,
     twitterUserName: `mqtizer`,
     image: '/seoThumbnail.png',
