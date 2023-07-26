@@ -54,6 +54,8 @@ const PolicyContainer = styled.div`
 export default function About({ data }: PageProps<Queries.Query>) {
   let privacyPolicy = data.markdownRemark as any
 
+  if (!privacyPolicy || !privacyPolicy.html) return <div>404</div>
+
   return (
     <MainLayout>
       <PolicyContainer>

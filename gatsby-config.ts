@@ -6,8 +6,8 @@ const config: GatsbyConfig = {
     title: `MQTIZER | MQTT Client`,
     siteUrl: `https://www.mqtizer.com`,
     description: `Cross Platform, Mobile first, collaborative Industrial grade MQTT Client for IoT and Industry 4.0. Batteries included`,
-    linkedInUsername: `mqtizer`,
-    twitterUserName: `mqtizer`,
+    linkedInUsername: `sanyam-arya`,
+    twitterUserName: `sanyamarya`,
     image: '/seoThumbnail.png',
     keyWords: [
       'MQTT',
