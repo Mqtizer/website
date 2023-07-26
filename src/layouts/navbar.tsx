@@ -72,7 +72,7 @@ const NavLinks = styled.nav`
   }
 `
 
-const DownloadButton = styled.button`
+const ContactUsButton = styled.button`
   padding: 0.8rem 1.4rem;
   @media only screen and (max-width: 920px) {
     display: none;
@@ -133,7 +133,7 @@ export default function Navbar({}: NavBarProps) {
       <Logo />
       <NavLinks>
         {NAVIGATION_LINKS.map(link => (
-          <StyledLink to={link.path} key={link.name}>
+          <StyledLink to={link.path} key={link.name} aria-label={link.name}>
             {link.name}
           </StyledLink>
         ))}
@@ -142,6 +142,7 @@ export default function Navbar({}: NavBarProps) {
         onClick={() => {
           setOverlayVisible(true)
         }}
+        aria-label="Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +156,7 @@ export default function Navbar({}: NavBarProps) {
           <path fillRule="nonzero" d="M0 0h512v23.91H0V0zm0 327.76h512v23.91H0v-23.91zm0-163.88h512v23.91H0v-23.91z" />
         </svg>
       </HamBurger>
-      <DownloadButton onClick={() => setContactModalOpen()}>
+      <ContactUsButton onClick={() => setContactModalOpen()} aria-label="Contact Us">
         Contact Us
         {/* <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -163,7 +164,7 @@ export default function Navbar({}: NavBarProps) {
             fill="white"
           />
         </svg> */}
-      </DownloadButton>
+      </ContactUsButton>
       <Overlay className={isOverlayVisible ? 'visible' : ''}>
         <div
           style={{
@@ -178,6 +179,7 @@ export default function Navbar({}: NavBarProps) {
             onClick={() => {
               setOverlayVisible(false)
             }}
+            aria-label="Close Menu"
           >
             <svg
               version="1.1"
@@ -196,6 +198,7 @@ export default function Navbar({}: NavBarProps) {
           <StyledLink
             to={link.path}
             key={link.name}
+            aria-label={link.name}
             onClick={() => {
               setOverlayVisible(false)
             }}
@@ -211,6 +214,7 @@ export default function Navbar({}: NavBarProps) {
             fontSize: '1.25rem',
             lineHeight: '1.5rem',
           }}
+          aria-label="Contact Us"
           onClick={() => {
             setOverlayVisible(false)
             setContactModalOpen()
@@ -230,7 +234,7 @@ export default function Navbar({}: NavBarProps) {
 }
 function Logo() {
   return (
-    <LogoLink to="/" key="logo">
+    <LogoLink to="/" key="logo" aria-label="home logo">
       <StaticImage quality={100} src="../images/icon.png" alt="Logo" height={44} />
       <p>MQTIZER</p>
     </LogoLink>

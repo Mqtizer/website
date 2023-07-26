@@ -49,6 +49,7 @@ export default function SEO({ title, description, pathname, keyWords, image, chi
 
   return (
     <>
+      <html lang="en" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

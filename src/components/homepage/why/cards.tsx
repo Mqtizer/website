@@ -22,6 +22,9 @@ const PainCardContainer = styled.div`
     flex-direction: column;
     gap: 1.2rem;
     padding: 4rem 2rem 2rem 2rem;
+    @media (max-width: 768px) {
+      padding: 6rem 2rem 2rem 2rem;
+    }
     h3 {
       font-size: 2rem;
       font-style: normal;
