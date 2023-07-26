@@ -7,7 +7,7 @@ const TeamSection = styled.div`
   position: absolute;
   top: -36rem;
   @media (max-width: 768px) {
-    top: -56rem;
+    top: -60rem;
   }
   left: 10vw;
   background: #dee0ff url('/fade_team.svg') no-repeat;

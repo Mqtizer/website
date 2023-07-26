@@ -24,7 +24,7 @@ const NAVIGATION_LINKS = [
 ]
 
 const StyledLink = styled(Link)`
-  font-size: 1.25rem;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5rem;
@@ -93,7 +93,7 @@ const Overlay = styled.div`
   opacity: 1;
   width: 100%;
   transition: all 0.2s ease-in-out;
-  box-shadow: var(--elevation-light);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   &.visible {
     opacity: 1;
     left: 0;

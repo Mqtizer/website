@@ -8,6 +8,7 @@
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
 }
 
 html {
@@ -33,7 +34,8 @@ body {
     background-color: #FEFEFE;
     color: #191C1E;
     overflow-x: hidden;
-
+    width: 100vw;
+    height: 100vh;
 }
 
 @media (max-width: 1080px) {
@@ -75,7 +77,7 @@ button {
     transition: all 0.2s ease-in-out;
 
     &:not(:disabled):hover {
-        background: #2e345e;
+        /* background: #2e345e; */
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 

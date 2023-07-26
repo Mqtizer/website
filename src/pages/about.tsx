@@ -34,7 +34,7 @@ export default function About({ data }: PageProps<Queries.Query>) {
     return a.frontmatter?.index - b.frontmatter?.index
   })
   return (
-    <MainLayout footerMarginTop="40rem" footerMarginTopMobile="60rem" footerChildren={<TeamFooter />}>
+    <MainLayout footerMarginTop="42rem" footerMarginTopMobile="62rem" footerChildren={<TeamFooter />}>
       <AboutContainer>
         <h1>
           About <span className="mq">Mqtizer</span>{' '}

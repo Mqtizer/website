@@ -47,7 +47,7 @@ const footerSection = [
 
 const FooterSection = styled.div`
   background: #353d69;
-  padding: 12rem 10rem 4rem 10rem;
+  padding: min(calc(var(--footer-section-padding) - 4rem), 16rem) 10rem 4rem 10rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ const FooterWrapper = styled.div`
   }
 `
 
-export default function Footer({ children, marginTop = '16rem', marginTopMobile }: FooterProps) {
+export default function Footer({ children, marginTop = '16rem', marginTopMobile = '16rem' }: FooterProps) {
   return (
     <FooterWrapper
       style={{
@@ -177,7 +177,12 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
       }}
     >
       {children}
-      <FooterSection>
+      <FooterSection
+        style={{
+          // @ts-ignore
+          '--footer-section-padding': marginTop,
+        }}
+      >
         <div className="main-section">
           <BrandSection>
             <span className="logo">
@@ -229,7 +234,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
               gap: '1.2rem',
             }}
           >
-            <Link to="https://www.linkedin.com/in/sanyam-arya/" target="blank">
+            <Link to="https://www.linkedin.com/in/sanyam-arya/" target="blank" aria-label="LinkedIn">
               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" width="40" height="40" rx="20" fill="#FCFCFF" />
                 <path
@@ -238,7 +243,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
                 />
               </svg>
             </Link>
-            <Link to="https://www.sanyamarya.com" target="blank">
+            <Link to="https://www.sanyamarya.com" target="blank" aria-label="Portfolio">
               <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" width="40" height="40" rx="20" fill="#FCFCFF" />
                 <path
