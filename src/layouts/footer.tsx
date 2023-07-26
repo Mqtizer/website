@@ -114,9 +114,8 @@ const BrandSection = styled.div`
   flex-direction: column;
   gap: 2rem;
   color: #feebcc;
-  width: 30%;
-  min-width: 400px;
-  // flex: 1;
+
+  flex: 2;
 
   .logo {
     display: flex;
