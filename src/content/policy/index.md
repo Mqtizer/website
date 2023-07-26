@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: Privacy Policy
-
+kind: policy
 ---
 # Privacy Policy For MQTIZER
 

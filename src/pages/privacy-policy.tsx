@@ -52,8 +52,8 @@ const PolicyContainer = styled.div`
   }
 `
 export default function About({ data }: PageProps<Queries.Query>) {
-  let privacyPolicy = data.markdownRemark as any
-
+  const pp = data.allMarkdownRemark.nodes as any[]
+  const privacyPolicy = pp[0]
   if (!privacyPolicy || !privacyPolicy.html) return <div>404</div>
 
   return (
@@ -67,11 +67,14 @@ export default function About({ data }: PageProps<Queries.Query>) {
 
 export const query = graphql`
   {
-    markdownRemark(id: { eq: "e527610e-d67d-5545-aa4b-04b79bfeb099" }) {
-      html
-      frontmatter {
-        title
-        description
+    allMarkdownRemark(filter: { frontmatter: { kind: { eq: "policy" } } }) {
+      nodes {
+        frontmatter {
+          title
+
+          description
+        }
+        html
       }
     }
   }
