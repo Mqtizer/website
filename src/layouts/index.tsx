@@ -1,14 +1,15 @@
-import './global.css'
-import React, { useEffect, useState } from 'react'
-import Footer from './footer'
-import Navbar from './navbar'
+import React from 'react'
 import { ContactFormContainer } from '../context/contact_form'
+import Footer from './footer'
+import './global.css'
+import Navbar from './navbar'
 interface MainLayoutProps {
   children: React.ReactNode
   footerChildren?: React.ReactNode
   footerMarginTop?: string
   footerMarginTopMobile?: string
 }
+
 export default function MainLayout({
   children,
   footerChildren,
