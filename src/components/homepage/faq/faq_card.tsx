@@ -11,7 +11,7 @@ const FaqContainer = styled.div`
   border-radius: 0.5rem;
   cursor: pointer;
 
-  h4 {
+  h2 {
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 500;
@@ -43,7 +43,7 @@ export function FaqCard({ question, answer }: FaqCardProps) {
         backgroundColor: open ? '#F3F4FB' : '#FCFCFF',
       }}
     >
-      <h4>
+      <h2>
         {question}
         <svg
           style={{
@@ -56,7 +56,7 @@ export function FaqCard({ question, answer }: FaqCardProps) {
         >
           <path d="M17 14L12 9L7 14L17 14Z" fill="#46464F" />
         </svg>
-      </h4>
+      </h2>
       <p
         style={{
           height: open ? 'auto' : '0',
