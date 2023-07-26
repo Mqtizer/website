@@ -13,6 +13,7 @@
 
 html {
     font-size: 16px;
+
 }
 
 html:focus-within {
@@ -32,16 +33,17 @@ a:hover {
 
 body {
     background-color: #FEFEFE;
+    /* background-color: #0099cc; */
     color: #191C1E;
     overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
+
 }
 
 @media (max-width: 1080px) {
     html {
         font-size: 12px;
     }
+
 }
 
 body::-webkit-scrollbar {

@@ -59,7 +59,7 @@ export default function About({ data }: PageProps<Queries.Query>) {
   if (!privacyPolicy || !privacyPolicy.html) return <div>404</div>
 
   return (
-    <MainLayout footerMarginTop="9rem">
+    <MainLayout footerMarginTop="9rem" footerMarginTopMobile="6rem">
       <PolicyContainer>
         <h1>
           Privacy Policy For <span className="mq">Mqtizer</span>{' '}

@@ -48,6 +48,7 @@ const footerSection = [
 const FooterSection = styled.div`
   background: #353d69;
   padding: min(calc(var(--footer-section-padding) - 4rem), 16rem) 10rem 4rem 10rem;
+
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -55,7 +56,8 @@ const FooterSection = styled.div`
   align-items: flex-start;
   gap: 4rem;
   @media only screen and (max-width: 920px) {
-    padding: 18rem 2.75rem 4rem 2.75rem;
+    padding: min(calc(var(--footer-section-padding-mobile) + 2rem), 18rem) 2.75rem 4rem 2.75rem;
+    // padding: 18rem 2.75rem 4rem 2.75rem;
   }
   .main-section {
     width: 100%;
@@ -181,6 +183,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
         style={{
           // @ts-ignore
           '--footer-section-padding': marginTop,
+          '--footer-section-padding-mobile': marginTopMobile,
         }}
       >
         <div className="main-section">
