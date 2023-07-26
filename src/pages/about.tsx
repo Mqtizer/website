@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import MainLayout from '../layouts'
-import { PageProps, graphql } from 'gatsby'
+import { HeadFC, PageProps, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 import { AboutCard, TeamFooter } from '../components/about'
-
+import SEO from '../components/seo'
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -74,3 +74,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head: HeadFC = () => <SEO title=" About" />

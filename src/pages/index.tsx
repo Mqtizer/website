@@ -1,6 +1,7 @@
 import type { HeadFC, PageProps } from 'gatsby'
 import * as React from 'react'
 
+import SEO from '../components/seo'
 import MainLayout from '../layouts'
 
 import styled from '@emotion/styled'
@@ -44,4 +45,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Mqtizer</title>
+export const Head: HeadFC = () => <SEO />
