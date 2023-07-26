@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import useScrollPosition from '../hooks/useScrollPosition'
+import { StaticImage } from 'gatsby-plugin-image'
+import React, { useState } from 'react'
 import { useContactForm } from '../context/contact_form'
+import useScrollPosition from '../hooks/useScrollPosition'
 const NAVIGATION_LINKS = [
   {
     name: 'Features',

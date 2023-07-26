@@ -26,7 +26,7 @@ const footerSection = [
       },
       {
         name: 'Privacy Policy',
-        link: '/privacy',
+        link: '/privacy-policy',
       },
     ],
   },
