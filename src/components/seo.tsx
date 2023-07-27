@@ -45,8 +45,6 @@ export default function SEO({ title, description, pathname, keyWords, image, chi
     keyWords: [...new Set<string>([...defaultKeyWords, ...(keyWords || [])])].join(', '),
   }
 
-  console.log(seo)
-
   return (
     <>
       <html lang="en" />
