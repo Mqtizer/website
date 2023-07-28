@@ -61,7 +61,7 @@ export function FaqCard({ question, answer }: FaqCardProps) {
         style={{
           height: open ? 'auto' : '0',
           overflow: 'hidden',
-          padding: open ? '2rem 0' : '0',
+          padding: open ? '1rem 0 0 0' : '0',
         }}
       >
         {answer}

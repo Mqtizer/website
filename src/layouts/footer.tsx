@@ -74,10 +74,10 @@ const FooterSection = styled.div`
       gap: 2rem;
     }
     .link-title {
-      font-size: 1.375rem;
       font-style: normal;
-      font-weight: 400;
+      font-size: 1.25rem;
       line-height: 1.75rem;
+      font-weight: 300;
     }
     .link-content {
       display: flex;
@@ -115,8 +115,6 @@ const BrandSection = styled.div`
   gap: 2rem;
   color: #feebcc;
 
-  // flex: 1;
-
   .logo {
     display: flex;
     align-items: center;
@@ -125,6 +123,7 @@ const BrandSection = styled.div`
       margin: 0;
       width: 52px;
       height: 52px;
+      min-width: 52px;
     }
   }
   .logo-text {
