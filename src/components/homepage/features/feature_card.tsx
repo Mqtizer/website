@@ -36,7 +36,7 @@ const FeatureCardWrapper = styled.div`
     align-items: flex-start;
     gap: 1.2rem;
 
-    h2 {
+    h3 {
       font-size: 3rem;
       font-style: normal;
       font-weight: 500;
@@ -80,7 +80,7 @@ export default function FeatureCard({ title, subtitle, image, reverse }: Feature
         data-sal-easing="ease"
         data-sal-duration="250"
       >
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <div dangerouslySetInnerHTML={{ __html: subtitle }} />
       </div>
     </FeatureCardWrapper>

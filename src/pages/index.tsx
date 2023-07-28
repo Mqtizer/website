@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import MainLayout from '../layouts'
 
 import styled from '@emotion/styled'
-import { Faq, Features, HeroSection, QuestionSectionFooter, Why } from '../components/homepage'
+import { Faq, Features, HeroSection, PricePlan, QuestionSectionFooter, Why } from '../components/homepage'
 
 const HomePageContainer = styled.div`
   display: flex;
@@ -36,6 +36,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="main-section">
           <Why />
           <Features />
+          <PricePlan />
           <Faq />
         </div>
       </HomePageContainer>
