@@ -15,6 +15,7 @@ const AboutCardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
