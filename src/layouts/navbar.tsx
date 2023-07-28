@@ -24,7 +24,7 @@ const NAVIGATION_LINKS = [
 ]
 
 const StyledLink = styled(Link)`
-  font-size: 20px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5rem;
