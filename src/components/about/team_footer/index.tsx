@@ -5,7 +5,7 @@ import React from 'react'
 
 const TeamSection = styled.div`
   position: absolute;
-  top: -36rem;
+  top: -34rem;
   @media (max-width: 768px) {
     top: -60rem;
   }
