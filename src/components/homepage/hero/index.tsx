@@ -34,7 +34,7 @@ const HeroLayer = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 0rem;
-    width: 100vw;
+    width: 96vw;
     .hero_phone {
       display: none;
     }
