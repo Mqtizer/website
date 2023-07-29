@@ -22,13 +22,17 @@ const Section = styled.div`
   justify-content: start;
   gap: 1rem;
   width: 100vw;
-  padding: 8rem 4rem;
+  padding: 8rem 12rem;
 
   overflow: hidden;
   -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
   background-color: #e3e1ec;
   color: #191c1e;
+
+  @media (max-width: 920px) {
+    padding: 4rem 2rem;
+  }
 `
 
 const PricingPlanContainer = styled.div`
