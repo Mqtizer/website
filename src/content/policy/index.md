@@ -64,4 +64,4 @@ This policy is effective as of 2023-08-01
 
 ## 📞 Contact Us
 
-If you have any questions, concerns, or suggestions regarding our Privacy Policy, feel free to reach out to us at [er.sanyam.arya@gmail.com](mailto:er.sanyam.arya@gmail.com). We appreciate your feedback and are here to address any privacy-related inquiries you may have.
+If you have any questions, concerns, or suggestions regarding our Privacy Policy, feel free to reach out to us at[support@mqtizer.com](mailto:support@mqtizer.com). We appreciate your feedback and are here to address any privacy-related inquiries you may have.

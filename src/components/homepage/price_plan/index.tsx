@@ -136,12 +136,12 @@ export function PricePlan() {
           <StaticImage
             style={{
               margin: 'auto',
+              marginBottom: '2rem',
             }}
             quality={100}
             src="../../../images/quota_pro.svg"
             alt="Features Icon"
-            width={220}
-            height={220}
+            width={152}
           />
 
           <button
