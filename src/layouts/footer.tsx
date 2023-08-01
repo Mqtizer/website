@@ -101,19 +101,14 @@ const FooterSection = styled.div`
 const GetApp = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  span {
-    font-size: 1.375rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.75rem;
-  }
+  gap: 1.4rem;
 `
 const BrandSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
   color: #feebcc;
+  max-width: 350px;
 
   .logo {
     display: flex;
@@ -210,14 +205,14 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
             )
           })}
           <GetApp>
-            <span>Get the App</span>
+            <span className="link-title">Get the App</span>
             <Link
               to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client&hl=en_US"
               target="blank"
             >
-              <StaticImage quality={100} src="../images/google_play_white.svg" alt="Google Play" height={52} />
+              <StaticImage quality={100} src="../images/google_play_white.svg" alt="Google Play" height={36} />
             </Link>
-            <StaticImage quality={100} src="../images/apple_store_white.svg" alt="Apple Store" height={52} />
+            <StaticImage quality={100} src="../images/apple_store_white.svg" alt="Apple Store" height={36} />
           </GetApp>
         </div>
         <span

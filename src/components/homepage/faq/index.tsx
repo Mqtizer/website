@@ -8,32 +8,32 @@ const faqs = [
   {
     question: '📱 Can I use MQTIZER on multiple devices?',
     answer:
-      'Yes, absolutely! MQTIZER is designed to be a cross-platform MQTT mobile client. You can access it on your iPhone, Android phone, tablet, or computer. The app seamlessly syncs data between devices, allowing you to stay connected and monitor MQTT data from anywhere with ease. 🌐',
+      'Absolutely! MQTIZER is a cross-platform MQTT mobile client, accessible on iPhones, Android phones, tablets, and computers. Stay connected and monitor MQTT data with ease, syncing seamlessly between devices. 🌐',
   },
   {
-    question: '🚀 How can MQTIZER enhance collaboration?',
+    question: '🤝 How does MQTIZER enhance collaboration?',
     answer:
-      'MQTIZER empowers collaboration through dedicated workspaces. You can create and share workspaces with team members, enabling seamless collaboration on MQTT projects. Invite, approve, and work together efficiently. MQTIZER simplifies teamwork, making it easier to manage brokers, templates, and messages. 🤝',
+      'MQTIZER empowers teamwork through dedicated workspaces. Create and share workspaces with team members, making collaboration on MQTT projects efficient. Invite, approve, and work together seamlessly. Simplify teamwork, managing brokers, templates, and messages. 🚀',
   },
   {
     question: '🎛️ Can I simulate sensor data for demos?',
     answer:
-      'Absolutely! MQTIZER comes equipped with the Sensor Keyboard feature. You can effortlessly simulate sensor values for your demos, presentations, or testing purposes. The intuitive interface lets you customize data and create engaging scenarios. Bring life to your demos with MQTIZER! 📊',
+      'Absolutely! MQTIZER features the Sensor Keyboard, enabling effortless simulation of sensor values for demos, presentations, or testing. Customize data with an intuitive interface and create engaging scenarios. Bring life to your demos with MQTIZER! 📊',
   },
   {
     question: '🔧 How does MQTIZER streamline configuration?',
     answer:
-      'MQTIZER provides user-friendly interfaces for configuring and managing brokers, topics, and messages. With just a few clicks, you can update settings and profiles. MQTIZER simplifies configuration management, saving you time and effort while ensuring smooth communication. ⚙️',
+      'MQTIZER provides user-friendly interfaces to configure and manage brokers, topics, and messages. Update settings and profiles with just a few clicks. Save time and effort with streamlined configuration, ensuring smooth communication. ⚙️',
   },
   {
     question: '📈 Can MQTIZER handle real-time data monitoring?',
     answer:
-      'Absolutely! MQTIZER offers real-time data monitoring, giving you instant access to MQTT data from various sources. Keep track of crucial metrics, analyze trends, and receive notifications for critical events. MQTIZER ensures you never miss a beat in your IoT journey! 📊',
+      'Absolutely! MQTIZER offers real-time data monitoring, providing instant access to MQTT data from various sources. Keep track of crucial metrics, analyze trends, and receive notifications for critical events. Never miss a beat in your Industry 4.0 journey with MQTIZER! 📊',
   },
   {
     question: '🌟 What makes MQTIZER the ultimate MQTT mobile client?',
     answer:
-      'MQTIZER stands out with its feature-rich design and user-friendly experience. Real-time data monitoring, collaboration support, easy data simulation, seamless configuration, and multi-device compatibility - all packed into one app! MQTIZER elevates your MQTT communication, empowering you with unparalleled insights and connectivity. Experience the power of MQTIZER today! 🚀',
+      'MQTIZER is feature-rich and user-friendly, supporting real-time data monitoring, collaboration, easy data simulation, seamless configuration, and multi-device compatibility - all in one app! Elevate your MQTT communication with unparalleled insights and connectivity. Experience the power of MQTIZER today! 🚀',
   },
 ]
 

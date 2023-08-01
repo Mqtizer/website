@@ -15,13 +15,15 @@ const SectionSubtitle = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 2.5rem;
+  color: #46464f;
+  margin-bottom: 2rem;
 `
 const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.4rem;
 `
 export function Features() {
   const data = useStaticQuery<Queries.Query>(graphql`
@@ -55,9 +57,8 @@ export function Features() {
       <SectionTitle>Unlock the Power of Mqtizer</SectionTitle>
 
       <SectionSubtitle>
-        Mqtizer offers a range of innovative features designed to simplify your IoT development process. From seamless
-        collaboration and simulated data generation to comprehensive configuration management, Mqtizer empowers you to
-        create robust and efficient IoT solutions.
+        Unleash MQTT's Potential with MQTIZER! Empowering Industry4.0 growth, our features simplify collaboration, data
+        simulation, and configuration management. Create powerful M2M solutions effortlessly.
       </SectionSubtitle>
 
       {features.map(feature => {

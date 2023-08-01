@@ -65,8 +65,8 @@ const PainCard1 = () => (
     </div>
 
     <div className="text-content">
-      <h3>Challenging & Inefficient Development</h3>
-      <p>Developing IoT applications with existing MQTT clients can be challenging and inefficient.</p>
+      <h3>Unleash Efficiency in IoT Development</h3>
+      <p>Experience the challenge-free and efficient development process with MQTIZER's cutting-edge MQTT client.</p>
     </div>
   </PainCardContainer>
 )
@@ -78,10 +78,10 @@ const PainCard2 = () => (
     </div>
 
     <div className="text-content">
-      <h3>Slowing Down Your Progress</h3>
+      <h3>Accelerate Progress with MQTIZER</h3>
       <p>
-        Don't let outdated MQTT clients slow down your progress! Get ready to experience a seamless development process
-        with MQTIZER.
+        Outdated MQTT clients slowing you down? Say hello to a seamless and progressive development journey with
+        MQTIZER.
       </p>
     </div>
   </PainCardContainer>
@@ -94,10 +94,10 @@ const PainCard3 = () => (
     </div>
 
     <div className="text-content">
-      <h3>Empowering IoT Developers</h3>
+      <h3>Empowerment for Industry4.0 Innovators</h3>
       <p>
-        Our cross-platform mobile-first MQTT client empowers you with a feature-rich & user-friendly tool. Say goodbye
-        to challenges.
+        Our cross-platform mobile-first MQTT client empowers you with user-friendly tools, removing all hurdles in your
+        way.
       </p>
     </div>
   </PainCardContainer>
@@ -115,8 +115,10 @@ const PainCard4 = () => (
     </div>
 
     <div className="text-content">
-      <h3>Streamline, Collaborate & Communicate</h3>
-      <p>Streamline your IoT development, enhance collaboration, & ensure reliable communication with MQTT brokers.</p>
+      <h3>Seamless Streamlining, Collaboration & Communication</h3>
+      <p>
+        Optimize IoT development, enhance collaboration, and communicate effortlessly with MQTT brokers using MQTIZER.
+      </p>
     </div>
   </PainCardContainer>
 )
