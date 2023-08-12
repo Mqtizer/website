@@ -90,3 +90,24 @@ button {
 
     }
 }
+
+input,
+textarea {
+    color: #191c1e;
+    width: 100%;
+    max-width: 460px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #353d69;
+    background-color: #fcfcff;
+    font-size: 1.2rem;
+
+    ::placeholder {
+        color: #353d69aa;
+        font-size: 1.2rem;
+    }
+
+    .error {
+        border: 1px solid #ff331f;
+    }
+}

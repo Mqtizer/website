@@ -60,9 +60,11 @@ export default function useForm<IState extends Record<string, any>>(initial: ISt
 
   const registerField = (
     key: string,
+
     options?: {
       validator?: (value: string) => string
-    }
+    },
+    placeholder?: string
   ) => {
     if (options?.validator) validators.current[key] = options.validator
     return {
@@ -70,7 +72,7 @@ export default function useForm<IState extends Record<string, any>>(initial: ISt
       onChange: updateFieldValue(key),
       error: errors[key] || '',
       autoComplete: key,
-      placeholder: key,
+      placeholder: placeholder || key,
       name: key,
       'aria-label': key,
       'aria-invalid': errors[key] ? true : false,
