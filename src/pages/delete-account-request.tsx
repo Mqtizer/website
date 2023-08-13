@@ -43,16 +43,19 @@ export default function DeleteAccount() {
 
   const handleSubmit = async () => {
     try {
-      await fetch('https://mapi.mqtizer.com/public/delete-account-request', {
+      const response = await fetch(`${process.env.MAPI_URL}public/delete-account-request`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(state),
       })
-
-      navigate('/')
-      alert('Message sent successfully.')
+      const { error, message } = await response.json()
+      if (error) alert(error)
+      if (message) {
+        navigate('/')
+        alert('Message sent successfully.')
+      }
     } catch (error) {
       alert('Error sending message. Please verify your email address and try again.')
       reset()

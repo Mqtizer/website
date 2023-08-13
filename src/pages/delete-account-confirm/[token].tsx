@@ -43,7 +43,7 @@ export default function DeleteAccountConfirm(props: PageProps) {
     const fetchDeleteAccount = async () => {
       try {
         setLoading(true)
-        const response = await fetch('https://mapi.mqtizer.com/public/delete-account-confirm', {
+        const response = await fetch(`${process.env.MAPI_URL}public/delete-account-confirm`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

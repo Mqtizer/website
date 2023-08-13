@@ -91,7 +91,7 @@ export default function Contact({ open, onClose }: ContactProps) {
   const [done, setDone] = useState(false)
   const handleSubmit = async () => {
     try {
-      await fetch('https://mapi.mqtizer.com/public/queryMessage', {
+      await fetch(`${process.env.MAPI_URL}public/queryMessage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
