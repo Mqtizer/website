@@ -139,3 +139,7 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+strong {
+    font-weight: 800;
+}

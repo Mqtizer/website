@@ -69,12 +69,16 @@ export default function DeleteAccount() {
         DELETE<i>MQTIZER</i>ACCOUNT
       </h1>
       <p>
-        If you want to delete your account, please enter your email address and a reason for deleting your account.
+        If you want to delete your account, please enter your email address.
+        <br />
+        Please also enter a reason for deleting your account. We would love to hear your feedback.
+        <br />
         <br />
         After submitting the form, you will receive an email with a link to confirm the deletion of your account.
         <br />
         <br />
-        <strong>NOTE:</strong> <i>An account once deleted cannot be recovered.</i>
+        {/* List of notes */}
+        <strong>Important:</strong> If you delete your account, all your data will be deleted and cannot be restored.
       </p>
       <input
         type="email"
@@ -113,6 +117,7 @@ export default function DeleteAccount() {
       >
         Delete Account
       </button>
+      <br />
     </DeleteAccountContainer>
   )
 }
