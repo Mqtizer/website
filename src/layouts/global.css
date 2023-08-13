@@ -111,3 +111,31 @@ textarea {
         border: 1px solid #ff331f;
     }
 }
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 136px;
+    height: 136px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #191C1E;
+    border-color: #191C1E transparent #191C1E transparent;
+    animation: lds-dual-ring-animation 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

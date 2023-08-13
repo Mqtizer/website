@@ -43,7 +43,7 @@ export default function DeleteAccount() {
 
   const handleSubmit = async () => {
     try {
-      await fetch('http://localhost:3000/public/delete-account-request', {
+      await fetch('https://mapi.mqtizer.com/public/delete-account-request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
