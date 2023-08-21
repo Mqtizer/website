@@ -127,7 +127,7 @@ export function PricePlan() {
             <span>{newLocal}2 Workspace</span>
             <span>{newLocal}3 Brokers per Workspace</span>
             <span>{newLocal}3 Members per Workspace</span>
-            <span>{newLocal}3 Templates per Broker</span>
+            <span>{newLocal}3 Templates</span>
           </div>
         </div>
         <div className="plan">

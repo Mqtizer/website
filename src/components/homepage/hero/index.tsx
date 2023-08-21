@@ -93,10 +93,7 @@ export function HeroSection() {
               gap: '1rem',
             }}
           >
-            <Link
-              to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client&hl=en_US"
-              target="blank"
-            >
+            <Link to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client" target="blank">
               <StaticImage quality={100} src="../../../images/google_play.svg" alt="Google Play" height={52} />
             </Link>
             <StaticImage quality={100} src="../../../images/apple_store.svg" alt="Apple Store" height={52} />
