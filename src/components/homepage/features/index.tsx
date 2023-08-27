@@ -52,7 +52,14 @@ export function Features() {
 
   return (
     <Section id="features">
-      <StaticImage quality={100} src="../../../images/feature_icon.png" alt="Features Icon" width={72} height={72} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/feature_icon.png"
+        alt="Features Icon"
+        width={72}
+        height={72}
+      />
 
       <SectionTitle>Unlock the Power of Mqtizer</SectionTitle>
 

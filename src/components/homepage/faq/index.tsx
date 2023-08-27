@@ -60,7 +60,13 @@ const Section = styled.div`
 export function Faq() {
   return (
     <Section id="faq">
-      <StaticImage quality={100} src="../../../images/faq_icon.png" alt="Google Play" height={72} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/faq_icon.png"
+        alt="Google Play"
+        height={72}
+      />
       <SectionTitle>Frequently Asked Questions</SectionTitle>
       <SectionSubtitle>Have Questions? We are here to help you!</SectionSubtitle>
       <br />

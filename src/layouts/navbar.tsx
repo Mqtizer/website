@@ -235,7 +235,7 @@ export default function Navbar({}: NavBarProps) {
 function Logo() {
   return (
     <LogoLink to="/" key="logo" aria-label="home logo">
-      <StaticImage quality={100} src="../images/icon.png" alt="Logo" height={44} />
+      <StaticImage placeholder="blurred" quality={100} src="../images/icon.png" alt="Logo" height={44} />
       <p>MQTIZER</p>
     </LogoLink>
   )

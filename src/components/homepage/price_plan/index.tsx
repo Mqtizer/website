@@ -110,13 +110,27 @@ const PricingPlanContainer = styled.div`
 `
 
 const newLocal = (
-  <StaticImage quality={100} src="../../../images/quota_icon.svg" alt="Features Icon" width={32} height={32} />
+  <StaticImage
+    placeholder="blurred"
+    quality={100}
+    src="../../../images/quota_icon.svg"
+    alt="Features Icon"
+    width={32}
+    height={32}
+  />
 )
 export function PricePlan() {
   const { setContactModalOpen } = useContactForm()
   return (
     <Section id="pricing">
-      <StaticImage quality={100} src="../../../images/pricing_icon.png" alt="Features Icon" width={72} height={72} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/pricing_icon.png"
+        alt="Features Icon"
+        width={72}
+        height={72}
+      />
       <SectionTitle>Pricing Plan</SectionTitle>
       <SectionSubtitle>No Surprise Fees</SectionSubtitle>
       <PricingPlanContainer>
@@ -134,6 +148,7 @@ export function PricePlan() {
           <h3>Pro Plan</h3>
           <h4>We are yet to figure out 🤪</h4>
           <StaticImage
+            placeholder="blurred"
             style={{
               margin: 'auto',
               marginBottom: '2rem',

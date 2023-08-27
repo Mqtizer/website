@@ -65,7 +65,7 @@ export default function DeleteAccount() {
   return (
     <DeleteAccountContainer>
       <h1>
-        <StaticImage src="../images/icon.png" alt="Logo" height={112} />
+        <StaticImage placeholder="blurred" src="../images/icon.png" alt="Logo" height={112} />
         DELETE<i>MQTIZER</i>ACCOUNT
       </h1>
       <p>

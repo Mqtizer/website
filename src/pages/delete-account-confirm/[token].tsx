@@ -88,7 +88,7 @@ export default function DeleteAccountConfirm(props: PageProps) {
   return (
     <DeleteConfirmContainer>
       <h1>
-        <StaticImage src="../../images/icon.png" alt="Logo" height={112} />
+        <StaticImage placeholder="blurred" src="../../images/icon.png" alt="Logo" height={112} />
         Your account has been deleted.
       </h1>
       <p>

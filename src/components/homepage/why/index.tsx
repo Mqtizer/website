@@ -35,7 +35,13 @@ const Section = styled.div`
 export function Why() {
   return (
     <Section id="why">
-      <StaticImage quality={100} src="../../../images/why/icon.png" alt="Why Mqtizer" height={72} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/why/icon.png"
+        alt="Why Mqtizer"
+        height={72}
+      />
       <SectionTitle>Why MQTIZER?</SectionTitle>
       <br />
       <div className="why-container">

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 const TeamSection = styled.div`

@@ -183,7 +183,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
         <div className="main-section">
           <BrandSection>
             <span className="logo">
-              <StaticImage src="../images/icon_dark.png" alt="Logo" height={52} />
+              <StaticImage placeholder="blurred" src="../images/icon_dark.png" alt="Logo" height={52} />
               <p className="logo-text">MQTIZER</p>
             </span>
             <span className="sub-heading">Empower Your IoT Development with Mqtizer</span>
@@ -210,9 +210,21 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
               to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client&hl=en_US"
               target="blank"
             >
-              <StaticImage quality={100} src="../images/google_play_white.svg" alt="Google Play" height={36} />
+              <StaticImage
+                placeholder="blurred"
+                quality={100}
+                src="../images/google_play_white.svg"
+                alt="Google Play"
+                height={36}
+              />
             </Link>
-            <StaticImage quality={100} src="../images/apple_store_white.svg" alt="Apple Store" height={36} />
+            <StaticImage
+              placeholder="blurred"
+              quality={100}
+              src="../images/apple_store_white.svg"
+              alt="Apple Store"
+              height={36}
+            />
           </GetApp>
         </div>
         <span

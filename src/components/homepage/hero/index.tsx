@@ -82,7 +82,7 @@ export function HeroSection() {
               gap: '1rem',
             }}
           >
-            <StaticImage src="../../../images/icon.png" alt="Logo" height={72} />
+            <StaticImage placeholder="blurred" src="../../../images/icon.png" alt="Logo" height={72} />
             <LogoText>MQTIZER</LogoText>
           </span>
           <Subtitle>The Cross-Platform MQTT Client for Industrial-Grade IoT Solutions</Subtitle>
@@ -94,9 +94,21 @@ export function HeroSection() {
             }}
           >
             <Link to="https://play.google.com/store/apps/details?id=com.sanyamarya.mqtizermqtt_client" target="blank">
-              <StaticImage quality={100} src="../../../images/google_play.svg" alt="Google Play" height={52} />
+              <StaticImage
+                placeholder="blurred"
+                quality={100}
+                src="../../../images/google_play.svg"
+                alt="Google Play"
+                height={52}
+              />
             </Link>
-            <StaticImage quality={100} src="../../../images/apple_store.svg" alt="Apple Store" height={52} />
+            <StaticImage
+              placeholder="blurred"
+              quality={100}
+              src="../../../images/apple_store.svg"
+              alt="Apple Store"
+              height={52}
+            />
           </div>
           <a
             href="https://www.producthunt.com/posts/mqtizer?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-mqtizer"
@@ -111,6 +123,7 @@ export function HeroSection() {
         </div>
 
         <StaticImage
+          placeholder="blurred"
           className="hero_phone"
           src="../../../images/hero_phone.png"
           alt="Hero Phone"

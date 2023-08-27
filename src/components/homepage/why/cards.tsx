@@ -57,6 +57,7 @@ const PainCard1 = () => (
   <PainCardContainer data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-in-out" data-sal-duration="200">
     <div className="icon">
       <StaticImage
+        placeholder="blurred"
         quality={100}
         src="../../../images/why/difficulty.png"
         alt="Challenging & Inefficient Development"
@@ -74,7 +75,13 @@ const PainCard1 = () => (
 const PainCard2 = () => (
   <PainCardContainer data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-in-out" data-sal-duration="200">
     <div className="icon">
-      <StaticImage quality={100} src="../../../images/why/stress.png" alt="Slowing Down Your Progress" height={56} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/why/stress.png"
+        alt="Slowing Down Your Progress"
+        height={56}
+      />
     </div>
 
     <div className="text-content">
@@ -90,7 +97,13 @@ const PainCard2 = () => (
 const PainCard3 = () => (
   <PainCardContainer data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-in-out" data-sal-duration="200">
     <div className="icon">
-      <StaticImage quality={100} src="../../../images/why/solution.png" alt="Empowering IoT Developers" height={56} />
+      <StaticImage
+        placeholder="blurred"
+        quality={100}
+        src="../../../images/why/solution.png"
+        alt="Empowering IoT Developers"
+        height={56}
+      />
     </div>
 
     <div className="text-content">
@@ -107,6 +120,7 @@ const PainCard4 = () => (
   <PainCardContainer data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-in-out" data-sal-duration="200">
     <div className="icon">
       <StaticImage
+        placeholder="blurred"
         quality={100}
         src="../../../images/why/increase.png"
         alt="Streamline, Collaborate & Communicate"
