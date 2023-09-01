@@ -77,12 +77,10 @@ The rapid growth of IoT has created a need for efficient and reliable communicat
 
 ### References:
 
-- [CloudMQTT: MQTT and the World of Internet of Things (IoT)](https://www.cloudmqtt.com/blog/mqtt-and-the-world-of-internet-of-things-iot.html)
-- [Emqx: MQTT 5.0 vs. MQTT 3.1.1 for IoT Use Cases](https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#mqtt-5-0-vs-mqtt-3-1-1-for-iot-use-cases)
-- [Emqx: Understanding Key MQTT Components](https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#understanding-key-mqtt-components)
-- [Fiberroad: Why is MQTT an Important Part of IoT?](https://fiberroad.com/why-is-mqtt-an-important-part-of-iot/)
+- <a href="https://www.cloudmqtt.com/blog/mqtt-and-the-world-of-internet-of-things-iot.html" target="_blank">CloudMQTT: MQTT and the World of Internet of Things (IoT)</a>
+- <a href="https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#mqtt-5-0-vs-mqtt-3-1-1-for-iot-use-cases" target="_blank">Emqx: MQTT 5.0 vs. MQTT 3.1.1 for IoT Use Cases</a>
+- <a href="https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#understanding-key-mqtt-components" target="_blank">Emqx: Understanding Key MQTT Components</a>
+- <a href="https://fiberroad.com/why-is-mqtt-an-important-part-of-iot/" target="_blank">Fiberroad: Why is MQTT an Important Part of IoT?</a>
 
-<!-- An image for a section of a blog post with size: 1200 * 628, for the following content: Lightweight and Efficient
-🚀 One of the primary reasons MQTT has gained popularity is its lightweight and efficient design. IoT devices often have limited resources in terms of processing power, memory, and battery life. MQTT's minimal code footprint and low bandwidth usage make it an ideal choice for resource-constrained devices. By minimizing the overhead associated with communication, MQTT enables efficient data transfer and reduces energy consumption. This not only saves costs but also ensures optimal performance in low-bandwidth networks.
 
-📚 According to a blog post on CloudMQTT, MQTT clients are lightweight and consume minimal hardware resources, making them suitable for small microcontrollers. This characteristic further enhances its popularity in IoT projects. -->
+
