@@ -37,60 +37,6 @@ const BlogContainer = styled.div`
   margin: 0 auto;
   padding: 4rem 0;
 
-  & :is(h2, h3, h4, h5, h6) {
-    font-style: normal;
-    font-weight: 500;
-    margin: 4rem 0 2rem 0;
-  }
-
-  h1 {
-    font-size: 3.25rem;
-    line-height: 8rem;
-    margin-bottom: 2rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  a {
-    color: #00115a;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-  li {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
-  li::before {
-    content: '👉';
-    color: #00115a;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-right: 0.5em;
-  }
-
-  p {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-    text-align: justify;
-  }
-
   .gatsby-image-wrapper {
     width: 100%;
     border-radius: 8px;
@@ -98,6 +44,7 @@ const BlogContainer = styled.div`
     margin: auto;
     margin-bottom: 0rem;
   }
+
   .share-row {
     width: 100%;
     display: flex;
@@ -124,8 +71,74 @@ const BlogContainer = styled.div`
       :hover .modal-wrapper {
         display: flex;
         top: 4rem;
+        right: 1rem;
         position: absolute;
       }
+    }
+  }
+
+  .html-content {
+    & :is(h2, h3, h4, h5, h6) {
+      font-style: normal;
+      font-weight: 500;
+      margin: 4rem 0 2rem 0;
+    }
+
+    h1 {
+      font-size: 3.25rem;
+      line-height: 4rem;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    a {
+      font-weight: 300;
+      :hover {
+        text-shadow: 0px 0px 1px #191c1eaa;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+    }
+    li {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+    li::before {
+      content: '👉';
+      color: #00115a;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-right: 0.5em;
+    }
+    .gatsby-resp-image-wrapper {
+      display: inline !important;
+      img {
+        object-fit: cover !important;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      text-align: justify;
     }
   }
 `
@@ -206,7 +219,7 @@ export default function BlogTemplate({
           </div>
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="html-content" dangerouslySetInnerHTML={{ __html: html }} />
       </BlogContainer>
       {/* <h1>THIS POST</h1>
       <h2>THIS POST</h2>
@@ -216,7 +229,7 @@ export default function BlogTemplate({
 }
 
 const minutesToRead = (text: string) => {
-  const wordsPerMinute = 200
+  const wordsPerMinute = 100
   let numberOfWords = text.split(/\s/g).length
   // remove html tags
   numberOfWords = numberOfWords - text.replace(/<[^>]*>/g, '').split(/\s/g).length + 1
