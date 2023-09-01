@@ -174,6 +174,12 @@ const AuthorCard = styled(Link)`
     }
     .sub {
       font-weight: 300;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
   }
 `
@@ -194,7 +200,7 @@ export default function BlogTemplate({
             <div className="information">
               <span className="name">{author.name}</span>
               <span className="sub">
-                {date} · {minutesToRead(html)}
+                {date} · <span>{minutesToRead(html)}</span>
               </span>
             </div>
           </AuthorCard>
