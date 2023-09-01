@@ -54,7 +54,6 @@ const ModalWrapper = styled.div`
 `
 
 export default function ShareButtons({ url, title, description }: ShareButtonsProps) {
-  if (!open) return null
   return (
     <ModalWrapper className="modal-wrapper">
       <LinkedinShareButton url={url} title={title} summary={description}>

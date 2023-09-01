@@ -68,11 +68,19 @@ const BlogContainer = styled.div`
   }
 
   ul {
-    list-style-type: '👉';
+    list-style-type: none;
   }
   li {
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+  li::before {
+    content: '👉';
+    color: #00115a;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.5em;
   }
 
   p {
@@ -101,7 +109,7 @@ const BlogContainer = styled.div`
 
     .share {
       color: #191c1e;
-      padding: 1rem;
+      padding: 2rem;
       cursor: pointer;
       display: flex;
       flex-direction: row;
@@ -112,8 +120,7 @@ const BlogContainer = styled.div`
       font-style: normal;
       font-weight: 400;
       line-height: 1.5rem;
-      width: 100%;
-      max-width: 200px;
+
       :hover .modal-wrapper {
         display: flex;
         top: 4rem;
