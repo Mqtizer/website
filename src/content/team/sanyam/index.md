@@ -7,5 +7,7 @@ website: https://sanyamarya.com
 github: https://github.com/ersanyamarya
 index: 0
 kind: team
+id: ersanyamarya
 ---
-Entrepreneur | Mentor | Open Source Enthusiast 
+
+Entrepreneur | Mentor | Open Source Enthusiast

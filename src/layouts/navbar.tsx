@@ -45,7 +45,6 @@ const NavBarContainer = styled.div`
   background-filter: blur(20px);
 
   &.shadow {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 `
@@ -92,7 +91,6 @@ const Overlay = styled.div`
   gap: 2rem;
   opacity: 1;
   width: 100%;
-  transition: all 0.2s ease-in-out;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   &.visible {
     opacity: 1;

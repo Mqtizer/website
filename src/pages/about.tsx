@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
-import React from 'react'
-import MainLayout from '../layouts'
 import { HeadFC, PageProps, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
+import React from 'react'
 import { AboutCard, TeamFooter } from '../components/about'
 import SEO from '../components/seo'
+import MainLayout from '../layouts'
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
