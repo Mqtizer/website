@@ -18,7 +18,7 @@ export const createPages = async ({ actions, graphql, reporter }: CreatePagesArg
             featuredImage {
               publicURL
               childImageSharp {
-                gatsbyImageData(width: 1000)
+                gatsbyImageData(width: 1200)
               }
             }
           }
@@ -38,7 +38,7 @@ export const createPages = async ({ actions, graphql, reporter }: CreatePagesArg
             website
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 1000)
+                gatsbyImageData(width: 400)
               }
             }
           }

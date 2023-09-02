@@ -114,21 +114,23 @@ const BlogContainer = styled.div`
 
     ul {
       list-style-type: none;
+      li {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+      li::before {
+        content: '👉';
+        color: #00115a;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-right: 0.5em;
+      }
     }
-    li {
-      font-size: 1.2rem;
-      line-height: 2rem;
-    }
-    li::before {
-      content: '👉';
-      color: #00115a;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-right: 0.5em;
-    }
+
     .gatsby-resp-image-wrapper {
-      display: inline !important;
+      margin: 3rem 0;
+      // display: inline !important;
       img {
         object-fit: cover !important;
       }
@@ -179,6 +181,7 @@ const AuthorCard = styled(Link)`
       justify-content: flex-start;
       align-items: center;
       gap: 0.5rem;
+      row-gap: 0rem;
       flex-wrap: wrap;
     }
   }
@@ -191,7 +194,7 @@ export default function BlogTemplate({
   const featuredImg = getImage(featuredImage?.childImageSharp?.gatsbyImageData as any) as any
   const authorImg = getImage(author.featuredImage?.childImageSharp?.gatsbyImageData as any) as any
   return (
-    <MainLayout footerMarginTop="10rem" footerMarginTopMobile="10rem">
+    <MainLayout footerMarginTop="8rem" footerMarginTopMobile="8rem">
       <BlogContainer>
         <GatsbyImage image={featuredImg} alt={title} aria-placeholder={title} />
         <div className="share-row">
