@@ -83,7 +83,8 @@ const config: GatsbyConfig = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1280,
-              wrapperStyle: (fluid: any) => `flex:${0.2};`,
+              quality: 100,
+              tracedSVG: true,
             },
           },
         ],

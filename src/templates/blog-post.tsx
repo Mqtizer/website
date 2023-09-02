@@ -32,7 +32,7 @@ const BlogContainer = styled.div`
   align-items: start;
   gap: 1.4rem;
   width: 80vw;
-  max-width: 1200px;
+  max-width: 1024px;
   min-width: 320px;
   margin: 0 auto;
   padding: 4rem 0;
@@ -129,10 +129,12 @@ const BlogContainer = styled.div`
     }
 
     .gatsby-resp-image-wrapper {
-      margin: 3rem 0;
+      margin: 2rem 0;
+      aspect-ratio: 9/1;
       // display: inline !important;
       img {
-        object-fit: cover !important;
+        // object-fit: cover !important;
+        aspect-ratio: 9/6 auto;
       }
     }
     p {

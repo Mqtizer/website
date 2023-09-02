@@ -23,7 +23,8 @@ The exponential growth of IoT 📈 has created a demand for dependable and effic
 
 ## Lightweight and Efficient
 
-<img src="./lightweight-and-efficient.png" alt="drawing" height="100px"/>
+<img src="./lightweight-and-efficient.png" alt="drawing" width="1200px"/>
+<!-- ![Lightweight and Efficient](./lightweight-and-efficient.png) -->
 
 🚀 One of the main advantages of MQTT is its lightweight and efficient design, which is especially useful for IoT devices that have limited processing power, memory, and battery life. MQTT has a small code footprint and uses low bandwidth, making it an ideal choice for devices with limited resources. By reducing communication overhead, MQTT enables efficient data transfer, which in turn reduces energy consumption, saves costs, and enhances performance, particularly in low-bandwidth networks. 💪
 
