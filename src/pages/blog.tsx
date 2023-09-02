@@ -70,7 +70,7 @@ export const query = graphql`
           author
           featuredImage {
             childImageSharp {
-              gatsbyImageData(width: 1000)
+              gatsbyImageData(width: 600)
             }
           }
         }
@@ -84,7 +84,7 @@ export const query = graphql`
           id
           featuredImage {
             childImageSharp {
-              gatsbyImageData(width: 1000)
+              gatsbyImageData(width: 400)
             }
           }
         }

@@ -24,7 +24,7 @@ const ModalWrapper = styled.div`
   min-height: 400px;
   margin: 0 auto;
   position: relative;
-  background: #fcfcff url('fade_circle_big.svg') no-repeat;
+  background: #fcfcff url('https://mqtizer.com/fade_circle_big.svg') no-repeat;
   background-size: cover;
   backdrop-filter: blur(px);
   border-radius: 1.5rem;

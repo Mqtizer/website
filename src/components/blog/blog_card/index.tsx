@@ -28,6 +28,7 @@ const BlogCardWrapper = styled(Link)`
 
   &: hover {
     box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
   }
 
   .text {
@@ -56,16 +57,14 @@ const BlogCardWrapper = styled(Link)`
   }
 
   .image {
-    // expand to fill the remaining space
     flex: 1;
-    padding: 0;
-    padding: 1rem;
+    padding: 2rem;
     .gatsby-image-wrapper {
       border-radius: 8px;
       padding: 0;
-      margin: 0;
     }
   }
+
   .info {
     display: flex;
     justify-content: space-between;
@@ -79,6 +78,7 @@ const BlogCardWrapper = styled(Link)`
     .image {
       display: block;
       margin: 0;
+      padding: 0;
       .gatsby-image-wrapper {
         border-radius: 8px 8px 0 0;
       }
@@ -121,10 +121,10 @@ export function BlogCard({
         // @ts-ignore
         '--direction': reverse ? 'row-reverse' : 'row',
       }}
-      data-sal={reverse ? 'slide-right' : 'slide-left'}
-      data-sal-delay="250"
-      data-sal-easing="ease"
-      data-sal-duration="250"
+      // data-sal={reverse ? 'slide-right' : 'slide-left'}
+      // data-sal-delay="250"
+      // data-sal-easing="ease"
+      // data-sal-duration="250"
     >
       <div className="text">
         <h2>{title}</h2>

@@ -29,6 +29,9 @@ const StyledLink = styled(Link)`
   font-weight: 500;
   line-height: 1.5rem;
   letter-spacing: 0.00938rem;
+  :hover {
+    text-shadow: 0px 0px 1px #191c1e;
+  }
 `
 
 const NavBarContainer = styled.div`
