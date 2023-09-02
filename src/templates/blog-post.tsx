@@ -240,10 +240,9 @@ export default function BlogTemplate({
 }
 
 const minutesToRead = (text: string) => {
-  const wordsPerMinute = 100
-  let numberOfWords = text.split(/\s/g).length
-  // remove html tags
-  numberOfWords = numberOfWords - text.replace(/<[^>]*>/g, '').split(/\s/g).length + 1
+  const wordsPerMinute = 200
+
+  const numberOfWords = text.replace(/<[^>]*>/g, '').split(/\s/g).length
   return `${Math.ceil(numberOfWords / wordsPerMinute)} min read`
 }
 
