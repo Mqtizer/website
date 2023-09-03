@@ -121,10 +121,10 @@ export function BlogCard({
         // @ts-ignore
         '--direction': reverse ? 'row-reverse' : 'row',
       }}
-      // data-sal={reverse ? 'slide-right' : 'slide-left'}
-      // data-sal-delay="250"
-      // data-sal-easing="ease"
-      // data-sal-duration="250"
+      data-sal={reverse ? 'slide-right' : 'slide-left'}
+      data-sal-delay="250"
+      data-sal-easing="ease"
+      data-sal-duration="250"
     >
       <div className="text">
         <h2>{title}</h2>
