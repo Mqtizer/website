@@ -25,7 +25,7 @@ const BlogsContainer = styled.div`
 `
 export default function Blog({ data }: PageProps<Queries.Query>) {
   let blogs = data.allMarkdownRemark.nodes as any[]
-  blogs = blogs.sort(dateSort)
+  blogs = blogs.sort(dateSort).filter(dataFilterShowDatedOnlyBeforeToday)
 
   const d = data as any
   let users = d.users.nodes as any[]
@@ -100,4 +100,10 @@ function dateSort(a: { frontmatter: { date: string } }, b: { frontmatter: { date
   const dateA = new Date(a.frontmatter?.date)
   const dateB = new Date(b.frontmatter?.date)
   return dateA > dateB ? -1 : dateA < dateB ? 1 : 0
+}
+
+function dataFilterShowDatedOnlyBeforeToday(a: { frontmatter: { date: string } }) {
+  const dateA = new Date(a.frontmatter?.date)
+  const dateB = new Date()
+  return dateA < dateB
 }

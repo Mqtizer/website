@@ -11,7 +11,7 @@ reference:
   - https://iotbyhvm.ooo/mqtt-products/
   - https://www.influxdata.com/blog/mqtt-use-cases/
 author: ersanyamarya
-date: September 2, 2023
+date: September 3, 2023
 featuredImage: featured.png
 ---
 

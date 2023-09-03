@@ -3,7 +3,7 @@ import type { GatsbyConfig } from 'gatsby'
 const config: GatsbyConfig = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: `MQTIZER | MQTT Client`,
+    title: `MQTIZER`,
     siteUrl: `https://www.mqtizer.com`,
     description: `Cross Platform, Mobile first, collaborative Industrial grade MQTT Client for IoT and Industry 4.0. Batteries included`,
     linkedInUsername: `sanyam-arya`,
@@ -30,9 +30,9 @@ const config: GatsbyConfig = {
       'Collaborative MQTT Client',
       'MQTT for IoT',
       'MQTT for Industry 4.0',
-      'MQTT for Cross Platform',
-      'MQTT for Mobile',
-      'MQTT for Desktop',
+      'MQTT client for Cross Platform',
+      'MQTT client for Mobile',
+      'MQTT client for Desktop',
     ],
   },
   graphqlTypegen: true,
