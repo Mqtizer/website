@@ -9,7 +9,7 @@ reference:
   - https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#mqtt-5-0-vs-mqtt-3-1-1-for-iot-use-cases
   - https://fiberroad.com/why-is-mqtt-an-important-part-of-iot/
 author: ersanyamarya
-date: September 1, 2023
+date: September 5, 2023
 featuredImage: featured.png
 ---
 
