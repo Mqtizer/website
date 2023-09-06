@@ -63,13 +63,14 @@ Apart from the specific use cases mentioned above, MQTT is widely used in variou
 - Oil and Gas: MQTT is utilized in the oil and gas industry for remote monitoring of pipelines, equipment condition monitoring, and predictive maintenance.
 - Logistics and Supply Chain: MQTT enables real-time tracking and monitoring of goods, optimizing logistics operations, and ensuring timely delivery.
 
-## Products that Use MQTT
+## Platforms that Provides/Supports MQTT
 
 MQTT is not just a theoretical concept; it is widely implemented in various products and platforms. Some popular products that utilize MQTT for efficient communication include:
 
 - <a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a>: An open-source home automation platform that leverages MQTT for seamless integration of smart devices and systems.
 - <a href="https://nodered.org/" target="_blank">Node-RED</a>: A flow-based programming tool that allows users to connect hardware devices, APIs, and online services using MQTT as a messaging protocol.
 - <a href="https://www.hivemq.com/" target="_blank">HiveMQ</a>: A scalable MQTT broker that provides enterprise-grade MQTT connectivity for mission-critical IoT applications.
+- <a href="https://mosquitto.org/" target="_blank">Eclipse Mosquitto</a>: An open-source MQTT broker that provides a lightweight messaging protocol for IoT applications.
 - <a href="https://aws.amazon.com/iot-core/" target="_blank">Amazon IoT Core</a>: A managed cloud service that enables devices to connect securely and interact with AWS services using MQTT as a communication protocol.
 - <a href="https://www.influxdata.com/lp/influxdb-database/?utm_term=influxdb" target="_blank">InfluxDB</a>: A time-series database that supports MQTT as a data ingestion protocol, allowing for efficient storage and analysis of IoT sensor data.
 
