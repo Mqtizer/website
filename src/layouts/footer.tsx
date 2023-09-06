@@ -5,7 +5,7 @@ import React from 'react'
 
 const footerSection = [
   {
-    title: 'What we do',
+    title: 'Resources',
     links: [
       {
         name: 'Features',
@@ -14,6 +14,11 @@ const footerSection = [
       {
         name: 'Blog',
         link: '/blog',
+      },
+      {
+        name: 'Case Study',
+        link: 'https://www.behance.net/gallery/178084495/MQTIZER-App',
+        newWindow: true,
       },
     ],
   },
@@ -36,10 +41,6 @@ const footerSection = [
       {
         name: 'FAQ',
         link: '/#faq',
-      },
-      {
-        name: 'Contact Us',
-        link: '/contact',
       },
     ],
   },
@@ -186,7 +187,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
               <StaticImage placeholder="blurred" src="../images/icon_dark.png" alt="Logo" height={52} />
               <p className="logo-text">MQTIZER</p>
             </span>
-            <span className="sub-heading">Empower Your IoT Development with Mqtizer</span>
+            <span className="sub-heading">Your appetizer for mqtt</span>
           </BrandSection>
           {footerSection.map(section => {
             return (
@@ -195,7 +196,7 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
                 <div className="link-content">
                   {section.links.map(link => {
                     return (
-                      <Link to={link.link} key={link.name}>
+                      <Link to={link.link} key={link.name} target={link.newWindow ? 'blank' : ''}>
                         {link.name}
                       </Link>
                     )

@@ -4,7 +4,7 @@ title: Where is MQTT Used? Exploring Real-World Applications
 slug: where-is-mqtt-used
 executiveSummary: MQTT is a widely used publish-subscribe messaging protocol that finds applications in various industries and products. This blog post explores the real-world use cases of MQTT, its role in different industries, and the products that utilize MQTT for efficient communication.
 keywords: MQTT, publish-subscribe, messaging protocol, real-world applications, industries, products
-reference: 
+reference:
   - https://aws.amazon.com/what-is/mqtt/
   - https://www.techtarget.com/iotagenda/definition/MQTT-MQ-Telemetry-Transport
   - https://www.hivemq.com/solutions/manufacturing/modernizing-the-manufacturing-industry/
@@ -74,7 +74,6 @@ MQTT is not just a theoretical concept; it is widely implemented in various prod
 - <a href="https://aws.amazon.com/iot-core/" target="_blank">Amazon IoT Core</a>: A managed cloud service that enables devices to connect securely and interact with AWS services using MQTT as a communication protocol.
 - <a href="https://www.influxdata.com/lp/influxdb-database/?utm_term=influxdb" target="_blank">InfluxDB</a>: A time-series database that supports MQTT as a data ingestion protocol, allowing for efficient storage and analysis of IoT sensor data.
 
-
 These are just a few examples of the wide range of products and platforms that utilize MQTT for seamless and efficient communication in the IoT ecosystem.
 
 ## Conclusion
@@ -82,7 +81,9 @@ These are just a few examples of the wide range of products and platforms that u
 MQTT, as a lightweight publish-subscribe messaging protocol, finds applications in various industries and products. Its efficient and reliable communication capabilities make it an ideal choice for connecting devices, enabling real-time data exchange, and optimizing processes. From smart homes and industrial IoT to transportation and healthcare, MQTT plays a crucial role in modernizing industries and improving operational efficiency. By understanding the real-world applications of MQTT and exploring the products that utilize it, businesses and individuals can harness the power of MQTT to unlock the full potential of the Internet of Things.
 
 ---
+
 ### References:
+
 - <a href="https://aws.amazon.com/what-is/mqtt/" target="_blank">What is MQTT? - MQTT Protocol Explained - Amazon AWS</a>
 - <a href="https://www.techtarget.com/iotagenda/definition/MQTT-MQ-Telemetry-Transport" target="_blank">How is MQTT used in the real world? - TechTarget</a>
 - <a href="https://www.hivemq.com/solutions/manufacturing/modernizing-the-manufacturing-industry/" target="_blank">Modernizing the Smart Manufacturing Industry with MQTT - HiveMQ</a>
