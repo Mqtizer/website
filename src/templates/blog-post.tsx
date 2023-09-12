@@ -11,7 +11,6 @@ interface DetailsProps extends PageProps {
     title: string
     slug: string
     keywords: string
-    reference: string[]
     executiveSummary: string
     date: string
     author: {

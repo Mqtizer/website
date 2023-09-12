@@ -4,12 +4,6 @@ title: Where is MQTT Used? Exploring Real-World Applications
 slug: where-is-mqtt-used
 executiveSummary: MQTT is a widely used publish-subscribe messaging protocol that finds applications in various industries and products. This blog post explores the real-world use cases of MQTT, its role in different industries, and the products that utilize MQTT for efficient communication.
 keywords: MQTT, publish-subscribe, messaging protocol, real-world applications, industries, products
-reference:
-  - https://aws.amazon.com/what-is/mqtt/
-  - https://www.techtarget.com/iotagenda/definition/MQTT-MQ-Telemetry-Transport
-  - https://www.hivemq.com/solutions/manufacturing/modernizing-the-manufacturing-industry/
-  - https://iotbyhvm.ooo/mqtt-products/
-  - https://www.influxdata.com/blog/mqtt-use-cases/
 author: ersanyamarya
 date: September 6, 2023
 featuredImage: featured.png

@@ -4,10 +4,6 @@ title: Why is MQTT So Popular?
 slug: why-is-mqtt-so-popular
 executiveSummary: MQTT has gained immense popularity in the IoT industry due to its lightweight and efficient nature, reliable messaging services, scalability, and secure communication capabilities. This blog post explores the reasons behind MQTT's popularity and its widespread adoption in industrial IoT.
 keywords: MQTT, popular, best, IoT, widely adopted, industrial IoT, Why is MQTT So Popular?, MQTT So Popular, MQTT Popular, MQTT Best, MQTT IoT, MQTT Widely Adopted, MQTT Industrial IoT
-reference:
-  - https://www.cloudmqtt.com/blog/mqtt-and-the-world-of-internet-of-things-iot.html
-  - https://www.emqx.com/en/blog/what-is-the-mqtt-protocol#mqtt-5-0-vs-mqtt-3-1-1-for-iot-use-cases
-  - https://fiberroad.com/why-is-mqtt-an-important-part-of-iot/
 author: ersanyamarya
 date: September 5, 2023
 featuredImage: featured.png

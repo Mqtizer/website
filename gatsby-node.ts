@@ -11,7 +11,6 @@ export const createPages = async ({ actions, graphql, reporter }: CreatePagesArg
             title
             slug
             keywords
-            reference
             executiveSummary
             date
             author
