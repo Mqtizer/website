@@ -32,7 +32,7 @@ export default function Blog({ data }: PageProps<Queries.Query>) {
 
   const getUser = (id: string) => users.find(user => user.frontmatter.id === id).frontmatter
   return (
-    <MainLayout footerMarginTop="12rem" footerMarginTopMobile="12rem">
+    <MainLayout footerMarginTop="8rem" footerMarginTopMobile="8rem">
       <BlogsContainer>
         <h1>Blogs</h1>
         {blogs.map((part, index) => {
