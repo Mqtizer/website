@@ -5,7 +5,7 @@ slug: can-iot-work-without-the-internet
 executiveSummary: Discover the potential of IoT devices to function without an internet connection and the limitations they may face.
 keywords: IoT, internet of things, connectivity, smart devices, technology
 author: ersanyamarya
-date: September 19, 2023
+date: September 18, 2023
 featuredImage: featured.png
 ---
 
