@@ -111,11 +111,11 @@ export function HeroSection() {
             />
           </div>
           <a
-            href="https://www.producthunt.com/posts/mqtizer?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-mqtizer"
+            href="https://www.producthunt.com/products/mqtizer/reviews?utm_source=badge-product_review&utm_medium=badge&utm_souce=badge-mqtizer"
             target="_blank"
           >
             <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=407832&theme=dark"
+              src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=545615&theme=dark"
               alt="Mqtizer - Cross&#0045;Platform&#0032;MQTT&#0032;Client&#0032;for&#0032;Industrial&#0045;Grade&#0032;IoT | Product Hunt"
               height="52"
             />
