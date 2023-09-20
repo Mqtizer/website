@@ -146,7 +146,7 @@ export function PricePlan() {
         </div>
         <div className="plan">
           <h3>Pro Plan</h3>
-          <h4>We are yet to figure out 🤪</h4>
+          <h4>No limit on your growth</h4>
           <StaticImage
             placeholder="blurred"
             style={{
