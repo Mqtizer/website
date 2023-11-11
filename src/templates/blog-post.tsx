@@ -105,7 +105,8 @@ const BlogContainer = styled.div`
     }
 
     a {
-      font-weight: 300;
+      font-weight: 400;
+      font-style: italic;
       :hover {
         text-shadow: 0px 0px 1px #191c1eaa;
       }
@@ -123,8 +124,10 @@ const BlogContainer = styled.div`
         font-weight: bold;
         display: inline-block;
         width: 1em;
-        margin-right: 0.5em;
+        margin-right: 1rem;
+        margin-left: 1rem;
       }
+      padding-bottom: 2rem;
     }
 
     .gatsby-resp-image-wrapper {
