@@ -29,8 +29,6 @@ Serverless MQTT service also takes care of the security and reliability aspects 
 
 With serverless MQTT service, you can focus on developing your IoT applications without worrying about the underlying infrastructure. You can easily connect your devices to the cloud and exchange data with other devices or services using the MQTT protocol.
 
-Certainly! Here's a section highlighting the benefits of Serverless MQTT:
-
 ## Benefits of Serverless MQTT 🌐
 
 Serverless MQTT offers a range of advantages that make it a compelling choice for IoT developers and businesses. By embracing the serverless paradigm, you unlock the following benefits:
