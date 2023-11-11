@@ -5,7 +5,7 @@ slug: serverless-mqtt-the-future-of-iot-messaging
 executiveSummary: A comparison of different serverless MQTT cloud providers and their features, benefits, and challenges for IoT applications.
 keywords: serverless, MQTT, IoT, cloud, EMQX, HiveMQ, Azure, AWS, Google Cloud, IoT Core, IoT Hub, EMQX Cloud Serverless, HiveMQ Cloud, AWS IoT Core, Azure IoT Hub, Google Cloud IoT Core
 author: ersanyamarya
-date: November 11, 2023
+date: November 13, 2023
 featuredImage: featured.png
 ---
 
