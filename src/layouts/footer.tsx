@@ -219,13 +219,15 @@ export default function Footer({ children, marginTop = '16rem', marginTopMobile 
                 height={36}
               />
             </Link>
-            <StaticImage
-              placeholder="blurred"
-              quality={100}
-              src="../images/apple_store_white.svg"
-              alt="Apple Store"
-              height={36}
-            />
+            <Link to="https://apps.apple.com/de/app/mqtizer/id6475204816?l=en-GB" target="blank">
+              <StaticImage
+                placeholder="blurred"
+                quality={100}
+                src="../images/apple_store_white.svg"
+                alt="Apple Store"
+                height={36}
+              />
+            </Link>
           </GetApp>
         </div>
         <span

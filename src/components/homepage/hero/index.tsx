@@ -102,13 +102,15 @@ export function HeroSection() {
                 height={52}
               />
             </Link>
-            <StaticImage
-              placeholder="blurred"
-              quality={100}
-              src="../../../images/apple_store.svg"
-              alt="Apple Store"
-              height={52}
-            />
+            <Link to="https://apps.apple.com/de/app/mqtizer/id6475204816?l=en-GB" target="blank">
+              <StaticImage
+                placeholder="blurred"
+                quality={100}
+                src="../../../images/apple_store.svg"
+                alt="Apple Store"
+                height={52}
+              />
+            </Link>
           </div>
           <a
             href="https://www.producthunt.com/products/mqtizer/reviews?utm_source=badge-product_review&utm_medium=badge&utm_souce=badge-mqtizer"
