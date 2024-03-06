@@ -117,6 +117,13 @@ const config: GatsbyConfig = {
       },
       __key: 'content',
     },
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        clarity_project_id: 'lcdkxswv3b',
+        enable_on_dev_env: true,
+      },
+    },
   ],
 }
 
