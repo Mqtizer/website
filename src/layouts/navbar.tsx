@@ -29,8 +29,34 @@ const StyledLink = styled(Link)`
   font-weight: 500;
   line-height: 1.5rem;
   letter-spacing: 0.00938rem;
-  :hover {
+  position: relative;
+  padding: 0.5rem 0.25rem;
+
+  &:hover,
+  &:focus-visible {
     text-shadow: 0px 0px 1px #191c1e;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #353d69;
+    transition: width 0.3s ease;
+  }
+
+  &:hover:after,
+  &:focus-visible:after {
+    width: 100%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #353d69;
+    outline-offset: 4px;
+    border-radius: 4px;
   }
 `
 
@@ -44,17 +70,34 @@ const NavBarContainer = styled.div`
   left: 0;
   z-index: 10;
   width: 100vw;
-  background-color: rgba(255, 253, 250, 0.9);
-  background-filter: blur(20px);
+  background-color: rgba(255, 253, 250, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 
   &.shadow {
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 253, 250, 0.95);
   }
 `
 const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 1rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #353d69;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
   p {
     margin: 0;
     font-size: 1.375rem;
@@ -68,14 +111,37 @@ const NavLinks = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   @media only screen and (max-width: 920px) {
     display: none;
   }
 `
 
 const ContactUsButton = styled.button`
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(53, 61, 105, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(53, 61, 105, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(53, 61, 105, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #191c1e;
+    outline-offset: 2px;
+  }
+
   @media only screen and (max-width: 920px) {
     display: none;
   }
@@ -85,50 +151,102 @@ const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: -100%;
+  width: 100%;
+  height: 100vh;
   padding: 2rem;
-  background-color: rgba(255, 253, 250, 1);
+  background-color: rgba(255, 253, 250, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
-  opacity: 1;
-  width: 100%;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  gap: 2.5rem;
+  opacity: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition:
+    left 0.3s ease,
+    opacity 0.3s ease;
+
   &.visible {
     opacity: 1;
     left: 0;
   }
+
   @media only screen and (min-width: 920px) {
     display: none;
   }
+
   & > button {
     width: 80%;
     margin: 0 auto;
   }
 `
 const HamBurger = styled.button`
-  width: 40px;
+  width: 44px;
+  height: 44px;
   border: none;
-  background: none;
+  background-color: rgba(53, 61, 105, 0.08);
   cursor: pointer;
   display: none;
-  padding: 5px;
-  @media only screen and (max-width: 920px) {
-    display: block;
-  }
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background: none;
-    box-shadow: none;
+    background-color: rgba(53, 61, 105, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #353d69;
+    outline-offset: 2px;
+    background-color: rgba(53, 61, 105, 0.2);
+  }
+
+  @media only screen and (max-width: 920px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: #353d69;
+    stroke-width: 2.5;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
   }
 `
+
+const MobileMenuButton = styled(StyledLink)`
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 0.75rem;
+
+  &:after {
+    height: 3px;
+  }
+`
+
 export type NavBarProps = {}
 
 export default function Navbar({}: NavBarProps) {
   const scrollPosition = useScrollPosition()
   const [isOverlayVisible, setOverlayVisible] = useState(false)
   const { setContactModalOpen } = useContactForm()
+
   return (
     <NavBarContainer className={scrollPosition > 215 ? 'shadow' : ''}>
       <Logo />
@@ -143,28 +261,24 @@ export default function Navbar({}: NavBarProps) {
         onClick={() => {
           setOverlayVisible(true)
         }}
-        aria-label="Menu"
+        aria-label="Open Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          shapeRendering="geometricPrecision"
-          textRendering="geometricPrecision"
-          imageRendering="optimizeQuality"
-          fillRule="evenodd"
-          clipRule="evenodd"
-          viewBox="0 0 512 351.67"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path fillRule="nonzero" d="M0 0h512v23.91H0V0zm0 327.76h512v23.91H0v-23.91zm0-163.88h512v23.91H0v-23.91z" />
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </HamBurger>
       <ContactUsButton onClick={() => setContactModalOpen()} aria-label="Contact Us">
         Contact Us
-        {/* <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14.9997 12.5V15H4.99967V12.5H3.33301V15C3.33301 15.9167 4.08301 16.6667 4.99967 16.6667H14.9997C15.9163 16.6667 16.6663 15.9167 16.6663 15V12.5H14.9997ZM14.1663 9.16668L12.9913 7.99168L10.833 10.1417V3.33334H9.16634V10.1417L7.00801 7.99168L5.83301 9.16668L9.99967 13.3333L14.1663 9.16668Z"
-            fill="white"
-          />
-        </svg> */}
       </ContactUsButton>
       <Overlay className={isOverlayVisible ? 'visible' : ''}>
         <div
@@ -173,6 +287,8 @@ export default function Navbar({}: NavBarProps) {
             justifyContent: 'space-between',
             alignItems: 'center',
             width: '100%',
+            marginBottom: '1rem',
+            padding: '0.5rem 0',
           }}
         >
           <Logo />
@@ -181,22 +297,27 @@ export default function Navbar({}: NavBarProps) {
               setOverlayVisible(false)
             }}
             aria-label="Close Menu"
+            style={{
+              backgroundColor: 'rgba(53, 61, 105, 0.12)',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
+            }}
           >
             <svg
-              version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 122.878 122.88"
-              enableBackground="new 0 0 122.878 122.88"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <g>
-                <path d="M1.426,8.313c-1.901-1.901-1.901-4.984,0-6.886c1.901-1.902,4.984-1.902,6.886,0l53.127,53.127l53.127-53.127 c1.901-1.902,4.984-1.902,6.887,0c1.901,1.901,1.901,4.985,0,6.886L68.324,61.439l53.128,53.128c1.901,1.901,1.901,4.984,0,6.886 c-1.902,1.902-4.985,1.902-6.887,0L61.438,68.326L8.312,121.453c-1.901,1.902-4.984,1.902-6.886,0 c-1.901-1.901-1.901-4.984,0-6.886l53.127-53.128L1.426,8.313L1.426,8.313z" />
-              </g>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </HamBurger>
         </div>
         {NAVIGATION_LINKS.map(link => (
-          <StyledLink
+          <MobileMenuButton
             to={link.path}
             key={link.name}
             aria-label={link.name}
@@ -205,15 +326,18 @@ export default function Navbar({}: NavBarProps) {
             }}
           >
             {link.name}
-          </StyledLink>
+          </MobileMenuButton>
         ))}
         <button
           style={{
             width: '80%',
             margin: '0 auto',
-            padding: '1rem',
-            fontSize: '1.25rem',
+            padding: '1.2rem',
+            fontSize: '1.5rem',
             lineHeight: '1.5rem',
+            borderRadius: '0.75rem',
+            fontWeight: '600',
+            marginTop: '1rem',
           }}
           aria-label="Contact Us"
           onClick={() => {
@@ -222,17 +346,12 @@ export default function Navbar({}: NavBarProps) {
           }}
         >
           Contact Us
-          {/* <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M14.9997 12.5V15H4.99967V12.5H3.33301V15C3.33301 15.9167 4.08301 16.6667 4.99967 16.6667H14.9997C15.9163 16.6667 16.6663 15.9167 16.6663 15V12.5H14.9997ZM14.1663 9.16668L12.9913 7.99168L10.833 10.1417V3.33334H9.16634V10.1417L7.00801 7.99168L5.83301 9.16668L9.99967 13.3333L14.1663 9.16668Z"
-              fill="white"
-            />
-          </svg> */}
         </button>
       </Overlay>
     </NavBarContainer>
   )
 }
+
 function Logo() {
   return (
     <LogoLink to="/" key="logo" aria-label="home logo">
